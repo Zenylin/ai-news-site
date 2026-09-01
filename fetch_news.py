@@ -10,7 +10,6 @@ from datetime import datetime
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 #LINE_CHANNEL_ACCESS_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
 #LINE_USER_ID = os.environ.get("LINE_USER_ID")
-# groq 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
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 
