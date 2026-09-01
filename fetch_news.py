@@ -59,10 +59,7 @@ def call_groq_api(prompt, retries=5):
                 "role": "system",
                 "content": "你是一個專業的科技新聞編輯，請嚴格只輸出合法的 JSON 格式內容，不要加上任何 Markdown 註解。"
             },
-            {
-                "role": "user",
-                "content": prompt
-            }
+            {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"},
         "temperature": 0.2
@@ -85,8 +82,8 @@ def call_groq_api(prompt, retries=5):
         except urllib.error.HTTPError as e:
             error_body = e.read().decode('utf-8')
             if e.code == 429:
-                # 增加退避等待時間（每次增加 8 秒，避免連續碰撞限流）
-                wait_time = (attempt + 1) * 8
+                # 關鍵修改：指數退避等待（10s, 20s, 30s...），給予 API 充足冷卻時間
+                wait_time = (attempt + 1) * 10
                 print(f"⏳ Groq 限流 (429)，等待 {wait_time} 秒後重試 (第 {attempt+1}/{retries} 次)...")
                 time.sleep(wait_time)
             else:
