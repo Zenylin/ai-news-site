@@ -37,17 +37,9 @@ jobs:
         run: python fetch_news.py
 
       - name: Commit and Push Updated Data
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/assets/data/
-          
-          if git diff --staged --quiet; then
-            echo "沒有新產出的 JSON 資料，跳過 commit。"
-          else
-            git commit -m "chore: auto-update daily AI news digest [skip ci]"
-            # 確保先拉取遠端最新 state 並強制 rebase
-            git fetch origin main
-            git rebase origin/main
-            git push origin main
-          fi
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-update daily AI news digest [skip ci]"
+          file_pattern: "src/assets/data/*.json"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
