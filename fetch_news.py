@@ -49,7 +49,7 @@ def clean_text(text):
     return text.replace('"', "'").replace('\n', ' ').replace('\r', '').strip()
 
 def call_groq_api_batch(articles_chunk, retries=5):
-    """批次將多篇新聞一次發送給 API 處理"""
+    """批次將多篇新聞一次發送給 API 處理，大幅減少 API 請求次數」"""
     if not GROQ_API_KEY:
         raise Exception("❌ 未偵測到 GROQ_API_KEY 環境變數")
 
@@ -97,7 +97,7 @@ def call_groq_api_batch(articles_chunk, retries=5):
                 return json.loads(content).get("articles", [])
         except urllib.error.HTTPError as e:
             if e.code == 429:
-                # 重試機制大幅拉長：第 1 次等 15 秒，第 2 次等 30 秒，逐步遞增
+                # 重試等待拉長：15s, 30s, 45s... 確保給予 Groq 額度充份冷卻時間
                 wait_time = (attempt + 1) * 15
                 print(f"⏳ Groq 限流 (429)，等待 {wait_time} 秒後重試 (第 {attempt+1}/{retries} 次)...")
                 time.sleep(wait_time)
@@ -220,7 +220,7 @@ def fetch_and_summarize():
         except Exception as feed_err:
             print(f"RSS 失敗 [{feed_url}]: {feed_err}")
 
-    # 批次分組處理（一次發送 5 篇新聞）
+    # 批次分組處理（一次 5 篇）
     processed_articles = []
     chunk_size = 5
     for i in range(0, len(raw_articles), chunk_size):
@@ -229,7 +229,7 @@ def fetch_and_summarize():
         try:
             res_list = call_groq_api_batch(chunk)
             processed_articles.extend(res_list)
-            # 批次之間間隔 10 秒，保護 API 配額
+            # 批次之間間隔 10 秒
             time.sleep(10)
         except Exception as err:
             print(f"❌ 批次處理失敗: {err}")
