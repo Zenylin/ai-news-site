@@ -10,6 +10,7 @@ from datetime import datetime
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 LINE_CHANNEL_ACCESS_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
 LINE_USER_ID = os.environ.get("LINE_USER_ID")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 
@@ -47,18 +48,33 @@ def clean_text(text):
     text = re.sub(r'<[^>]+>', '', text)
     return text.replace('"', "'").replace('\n', ' ').replace('\r', '').strip()
 
-def call_groq_api(prompt, retries=5):
+def call_groq_api_batch(articles_chunk, retries=5):
+    """批次將多篇新聞一次發送給 API 處理"""
     if not GROQ_API_KEY:
         raise Exception("❌ 未偵測到 GROQ_API_KEY 環境變數")
+
+    prompt = "請分析以下多篇新聞，並分別提供繁體中文標題與 2~3 點摘要。\n\n"
+    for idx, item in enumerate(articles_chunk, 1):
+        prompt += f"--- 新聞 {idx} ---\n標題：{item['raw_title']}\n內容：{item['raw_summary'][:800]}\n鏈結：{item['url']}\n\n"
+
+    prompt += """
+請嚴格輸出合法 JSON 格式，結構如下：
+{
+  "articles": [
+    {
+      "title": "繁體中文標題",
+      "summary": ["重點1", "重點2", "重點3"],
+      "url": "原文鏈結"
+    }
+  ]
+}
+"""
 
     url = "https://api.groq.com/openai/v1/chat/completions"
     payload = {
         "model": "groq/compound-mini",
         "messages": [
-            {
-                "role": "system",
-                "content": "你是一個專業的科技新聞編輯，請嚴格只輸出合法的 JSON 格式內容，不要加上任何 Markdown 註解。"
-            },
+            {"role": "system", "content": "你是一個專業科技新聞編輯，請嚴格只輸出合法的 JSON 格式內容。"},
             {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"},
@@ -78,16 +94,15 @@ def call_groq_api(prompt, retries=5):
             with urllib.request.urlopen(req) as response:
                 result = json.loads(response.read().decode('utf-8'))
                 content = result['choices'][0]['message']['content']
-                return json.loads(content)
+                return json.loads(content).get("articles", [])
         except urllib.error.HTTPError as e:
-            error_body = e.read().decode('utf-8')
             if e.code == 429:
-                # 關鍵修改：指數退避等待（10s, 20s, 30s...），給予 API 充足冷卻時間
-                wait_time = (attempt + 1) * 10
+                # 重試機制大幅拉長：第 1 次等 15 秒，第 2 次等 30 秒，逐步遞增
+                wait_time = (attempt + 1) * 15
                 print(f"⏳ Groq 限流 (429)，等待 {wait_time} 秒後重試 (第 {attempt+1}/{retries} 次)...")
                 time.sleep(wait_time)
             else:
-                print(f"❌ Groq API 錯誤 ({e.code}): {error_body}")
+                print(f"❌ Groq API 錯誤 ({e.code}): {e.read().decode('utf-8')}")
                 raise e
     raise Exception("❌ 已達到 Groq API 最大重試次數")
 
@@ -97,66 +112,40 @@ def send_line_message(articles):
         return
 
     today = datetime.now().strftime("%Y-%m-%d")
-    
-    # 限制最多推播 10 篇卡片（LINE Flex Carousel 單次上限 10 頁）
     bubbles = []
+    
     for idx, item in enumerate(articles[:10], 1):
         title = item.get("title", "無標題")
         url = item.get("url", "#")
         summaries = item.get("summary", [])
 
-        # 將摘要陣列轉為 Text Component
-        summary_components = []
-        for point in summaries[:3]: # 每張卡片最多放 3 點摘要
-            summary_components.append({
+        summary_components = [
+            {
                 "type": "text",
                 "text": f"• {point}",
                 "size": "xs",
                 "color": "#666666",
                 "wrap": True,
                 "margin": "xs"
-            })
+            } for point in summaries[:3]
+        ]
 
-        # 單張卡片 Structure (Bubble)
         bubble = {
             "type": "bubble",
-            "size": "micro", # 迷你卡片橫滑體驗最佳
+            "size": "micro",
             "header": {
                 "type": "box",
                 "layout": "vertical",
                 "backgroundColor": "#1DB446",
-                "contents": [
-                    {
-                        "type": "text",
-                        "text": f"NO. {idx}",
-                        "weight": "bold",
-                        "color": "#FFFFFF",
-                        "size": "xs"
-                    }
-                ]
+                "contents": [{"type": "text", "text": f"NO. {idx}", "weight": "bold", "color": "#FFFFFF", "size": "xs"}]
             },
             "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
-                    {
-                        "type": "text",
-                        "text": title,
-                        "weight": "bold",
-                        "size": "sm",
-                        "wrap": True,
-                        "maxLines": 2
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "md",
-                        "contents": summary_components
-                    }
+                    {"type": "text", "text": title, "weight": "bold", "size": "sm", "wrap": True, "maxLines": 2},
+                    {"type": "separator", "margin": "md"},
+                    {"type": "box", "layout": "vertical", "margin": "md", "contents": summary_components}
                 ]
             },
             "footer": {
@@ -168,28 +157,20 @@ def send_line_message(articles):
                         "style": "primary",
                         "color": "#1DB446",
                         "height": "sm",
-                        "action": {
-                            "type": "uri",
-                            "label": "閱讀原文",
-                            "uri": url
-                        }
+                        "action": {"type": "uri", "label": "閱讀原文", "uri": url}
                     }
                 ]
             }
         }
         bubbles.append(bubble)
 
-    # 組合 Carousel 包裝
     flex_payload = {
         "to": LINE_USER_ID,
         "messages": [
             {
                 "type": "flex",
                 "altText": f"🤖 AI Daily Digest ({today}) 新聞卡片推送",
-                "contents": {
-                    "type": "carousel",
-                    "contents": bubbles
-                }
+                "contents": {"type": "carousel", "contents": bubbles}
             }
         ]
     }
@@ -213,54 +194,51 @@ def fetch_and_summarize():
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, f"{today}.json")
 
-    # 檢查今日快取
+    # 快取檢查
     if os.path.exists(output_file):
         try:
             with open(output_file, "r", encoding="utf-8") as f:
                 articles = json.load(f)
             if articles:
-                print(f"📁 發現今日 ({today}) 已有抓取紀錄 ({len(articles)} 篇)，跳過 API 分析，直接發送 LINE 推播...")
+                print(f"📁 發現今日 ({today}) 已有抓取紀錄 ({len(articles)} 篇)，直接發送 LINE 推播...")
                 send_line_message(articles)
                 return
         except Exception as read_err:
-            print(f"⚠️ 讀取快取失敗 ({read_err})，重新執行抓取流程...")
+            print(f"⚠️ 讀取快取失敗 ({read_err})，重新執行抓取...")
 
-    articles = []
-    print("開始抓取 RSS...")
+    raw_articles = []
+    print("開始抓取 RSS 原文...")
     for feed_url in RSS_FEEDS:
         try:
             feed = feedparser.parse(feed_url, request_headers={'User-Agent': USER_AGENT})
             for entry in feed.entries[:2]:
-                title = clean_text(entry.title)
-                raw_summary = clean_text(entry.get('summary', entry.get('title', '')))
-
-                prompt = f"""
-                請分析以下文章並提供繁體中文摘要：
-                標題：{title}
-                內容：{raw_summary[:2000]}
-
-                請輸出合法 JSON 格式，結構如下：
-                {{
-                    "title": "繁體中文標題",
-                    "summary": ["重點1", "重點2", "重點3"],
-                    "url": "{entry.link}"
-                }}
-                """
-                try:
-                    summary_json = call_groq_api(prompt)
-                    articles.append(summary_json)
-                    print(f"✅ 成功處理: {title}")
-                    time.sleep(3)
-                except Exception as api_err:
-                    print(f"API 失敗 [{title}]: {api_err}")
+                raw_articles.append({
+                    "raw_title": clean_text(entry.title),
+                    "raw_summary": clean_text(entry.get('summary', entry.get('title', ''))),
+                    "url": entry.link
+                })
         except Exception as feed_err:
             print(f"RSS 失敗 [{feed_url}]: {feed_err}")
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(articles, f, ensure_ascii=False, indent=2)
+    # 批次分組處理（一次發送 5 篇新聞）
+    processed_articles = []
+    chunk_size = 5
+    for i in range(0, len(raw_articles), chunk_size):
+        chunk = raw_articles[i:i + chunk_size]
+        print(f"🚀 正在批次分析第 {i+1} ~ {i+len(chunk)} 篇新聞...")
+        try:
+            res_list = call_groq_api_batch(chunk)
+            processed_articles.extend(res_list)
+            # 批次之間間隔 10 秒，保護 API 配額
+            time.sleep(10)
+        except Exception as err:
+            print(f"❌ 批次處理失敗: {err}")
 
-    if articles:
-        send_line_message(articles)
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(processed_articles, f, ensure_ascii=False, indent=2)
+
+    if processed_articles:
+        send_line_message(processed_articles)
 
 if __name__ == "__main__":
     fetch_and_summarize()
