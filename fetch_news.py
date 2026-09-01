@@ -13,18 +13,6 @@ LINE_USER_ID = os.environ.get("LINE_USER_ID")
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 
-def get_current_api_key():
-    global current_key_index
-    if not keys_list:
-        return None
-    return keys_list[current_key_index % len(keys_list)]
-
-def switch_to_next_key():
-    global current_key_index
-    if len(keys_list) > 1:
-        current_key_index = (current_key_index + 1) % len(keys_list)
-        print(f"🔄 已自動切換至第 {current_key_index + 1} 組 Gemini API Key")
-
 # 擴充後的 RSS 來源
 RSS_FEEDS = [
     # 國外科技媒體
