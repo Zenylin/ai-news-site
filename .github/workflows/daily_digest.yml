@@ -1,0 +1,36 @@
+name: Daily AI News Digest Generator
+
+on:
+  schedule:
+    # 每日 UTC 00:00 (台灣時間早上 08:00) 自動執行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 支援在 GitHub 網頁上點擊按鈕手動觸發
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # Actions 上使用最新穩定的 Python 3.10
+
+      - name: Install Dependencies
+        run: |
+          pip install feedparser
+
+      - name: Run Fetch News Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python fetch_news.py
+
+      - name: Commit and Push Updated Data
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/assets/data/
+          git commit -m "chore: auto-update daily AI news digest [skip ci]" || exit 0
+          git push

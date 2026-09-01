@@ -1,0 +1,66 @@
+[
+  {
+    "title": "FTC 與 22 州就廣告業務起訴亞馬遜",
+    "summary": [
+      "聯邦貿易委員會 (FTC) 和 22 個州聯合對亞馬遜提出訴訟。",
+      "監管機構指控亞馬遜強迫逾百萬廣告商支付不應有的高額費用。",
+      "亞馬遜否認了這些指控。"
+    ],
+    "url": "https://www.nytimes.com/2026/08/31/technology/ftc-amazon-lawsuit-ad-prices.html"
+  },
+  {
+    "title": "賓利 Supersports：工程師的輕量化極致之作",
+    "summary": [
+      "這是賓利85年來最輕的車款。",
+      "該車款被命名為「Bentley Supersports」。",
+      "內容暗示這是一款經過精簡、注重性能，且是工程師們追求極致的成果。"
+    ],
+    "url": "https://arstechnica.com/cars/2026/08/the-bentley-supersports-a-stripped-out-engineers-indulgence/"
+  },
+  {
+    "title": "Nvidia 明年四分之一的業務將來自其資助的實驗室",
+    "summary": [
+      "Nvidia 已向購買其晶片的 AI 實驗室投資近 500 億美元。",
+      "Nvidia 已為這些實驗室爭取到超過 5000 億美元的承諾。",
+      "Nvidia 財務長表示，明年約四分之一的業務將來自這些由 Nvidia 資助的實驗室的需求。"
+    ],
+    "url": "https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs/"
+  },
+  {
+    "title": "Google 已從 Chrome 線上應用程式商店移除 MV2 擴充功能，包含 UBO",
+    "summary": [
+      "Google 已從 Chrome 線上應用程式商店中移除所有基於 Manifest V2 (MV2) 架構的擴充功能。",
+      "此次移除行動影響了包括知名的廣告阻擋器 uBlock Origin (UBO) 在內的多款熱門擴充功能。",
+      "這是 Google 逐步淘汰 MV2 並全面過渡到新一代 Manifest V3 (MV3) 標準的一部分，儘管 MV3 因其對某些擴充功能（特別是廣告阻擋器）能力的潛在限制而受到爭議。"
+    ],
+    "url": "https://webiterate.dev/google-removed-extensions-ublock-origin-108/"
+  },
+  {
+    "title": "可測試人類知識的時光膠囊：單一免費本地模型匯集41年《危險邊緣！》問答精華",
+    "summary": [
+      "研究顯示，一個單一、9 GB的開源模型（Qwen2.5-14B）現在能像2011年IBM Watson一樣，捕捉時代知識並在《危險邊緣！》挑戰中表現出色，但這個模型更為便攜且幾乎免費，不再受限於龐大且固定的伺服器叢集。",
+      "該模型首次在完整的《危險邊緣！》（Jeopardy!）問答數據集上進行了評估，該數據集涵蓋1984年至2025年共41個季度、529,939道題目，旨在測試人類累積的廣泛通用知識。",
+      "在嚴格的強制回應協議下，該模型對所有問題的回答準確率達到67.0%，對於事實類別的題目，準確率更超過85%，顯示其對通用知識的強大掌握能力。",
+      "與IBM Watson不同，此本地模型的一個關鍵優勢是它能夠回答其訓練截止日期之後播出的新題目（準確率為65%），這表明其知識不僅可攜帶，且不被特定時間點所凍結，具有更高的靈活性和適應性。"
+    ],
+    "url": "https://arxiv.org/abs/2608.27459"
+  },
+  {
+    "title": "Open ASR 排行榜新增第一個全球南方語言",
+    "summary": [
+      "Open ASR 排行榜首次納入來自全球南方（Global South）的語言。",
+      "此舉代表在推動語言多樣性與包容性方面邁出重要一步。",
+      "有助於擴展自動語音辨識（ASR）技術的覆蓋範圍，超越傳統主流語言。"
+    ],
+    "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south"
+  },
+  {
+    "title": "Gartner估計2027年AI安全市場規模將達48億美元，年增近七成",
+    "summary": [
+      "研究機構Gartner預估全球AI安全市場規模將持續成長。",
+      "該市場規模預計將從2026年的28.35億美元，大幅增長至2027年的47.83億美元，年增率高達68.7%。",
+      "Gartner進一步預測，到2028年，AI安全市場規模將接近77億美元。"
+    ],
+    "url": "https://www.ithome.com.tw/news/178560"
+  }
+]
