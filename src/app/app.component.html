@@ -1,0 +1,18 @@
+<div class="container" style="max-width: 800px; margin: 40px auto; font-family: sans-serif; padding: 0 20px;">
+  <header style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 30px;">
+    <h1>🤖 AI Daily Digest</h1>
+    <p style="color: #666;">自動化 AI 技術新聞日報 - {{ todayStr }}</p>
+  </header>
+
+  <div *ngIf="loading">載入新聞中...</div>
+  <div *ngIf="errorMsg" style="color: red;">{{ errorMsg }}</div>
+
+  <div *ngFor="let article of articles" style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+    <h2 style="margin-top: 0;">
+      <a [href]="article.url" target="_blank" style="color: #1a0dab; text-decoration: none;">{{ article.title }}</a>
+    </h2>
+    <ul style="line-height: 1.6; color: #333;">
+      <li *ngFor="let point of article.summary">{{ point }}</li>
+    </ul>
+  </div>
+</div>
