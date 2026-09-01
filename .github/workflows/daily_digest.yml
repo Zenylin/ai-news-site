@@ -14,6 +14,9 @@ concurrency:
 jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 賦予 Auto-commit 寫入 Git 儲存庫的權限
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -26,8 +29,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Dependencies
-        run: |
-          pip install feedparser
+        run: pip install feedparser
 
       - name: Run Fetch News Script
         env:
@@ -36,11 +38,8 @@ jobs:
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         run: python fetch_news.py
 
-          #- name: Run Fetch News Script
-          #        env:
-          #          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          #          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-          #          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
-          #        run: python fetch_news.py
-
-          fi
+      - name: Auto Commit and Push New Digest
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update daily AI news digest [skip ci]"
+          file_pattern: "src/assets/data/*.json"
