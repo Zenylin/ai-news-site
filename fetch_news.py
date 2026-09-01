@@ -7,21 +7,12 @@ import urllib.request
 import urllib.error
 from datetime import datetime
 
-# 1. 支援多種 Key 設定方式：
-#    - 方式 A: GEMINI_API_KEYS="Key1,Key2,Key3"
-#    - 方式 B: GEMINI_API_KEY_1, GEMINI_API_KEY_2, GEMINI_API_KEY_3...
-raw_keys = os.environ.get("GEMINI_API_KEYS", "")
-keys_list = [k.strip() for k in raw_keys.split(",") if k.strip()]
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+#LINE_CHANNEL_ACCESS_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
+#LINE_USER_ID = os.environ.get("LINE_USER_ID")
+# groq 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
 
-if not keys_list:
-    # 搜尋環境變數中所有 GEMINI_API_KEY 開頭的 Key
-    for env_name, env_val in os.environ.items():
-        if env_name.startswith("GEMINI_API_KEY") and env_val.strip():
-            keys_list.append(env_val.strip())
-
-# 全域 Key 索引
-current_key_index = 0
-#GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 
 def get_current_api_key():
     global current_key_index
@@ -64,46 +55,58 @@ RSS_FEEDS = [
 ]
 
 def clean_text(text):
-    """清理 HTML 標籤與非法字元，避免破壞 JSON 結構"""
     if not text:
         return ""
-    # 去除 HTML 標籤
     text = re.sub(r'<[^>]+>', '', text)
-    # 替換雙引號與換行符
-    text = text.replace('"', "'").replace('\n', ' ').replace('\r', '')
-    return text.strip()
+    return text.replace('"', "'").replace('\n', ' ').replace('\r', '').strip()
 
-def call_gemini_api(prompt, max_retries=3):
+def call_groq_api(prompt, retries=3):
+    if not GROQ_API_KEY:
+        raise Exception("❌ 未偵測到 GROQ_API_KEY 環境變數")
+
+    url = "https://api.groq.com/openai/v1/chat/completions"
     payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"response_mime_type": "application/json"}
+        # 修正：精確模型代號
+        "model": "groq/compound-mini",
+        "messages": [
+            {
+                "role": "system",
+                "content": "你是一個專業的科技新聞編輯，請嚴格只輸出合法的 JSON 格式內容，不要加上任何 Markdown 註解（如 ```json）。"
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        "response_format": {"type": "json_object"},
+        "temperature": 0.2
     }
-    data = json.dumps(payload).encode('utf-8')
-    
-    for attempt in range(max_retries):
-        api_key = get_current_api_key()
-        if not api_key:
-            raise Exception("❌ 未偵測到任何有效的 GEMINI_API_KEY 環境變數")
 
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-        req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
-        
+    data = json.dumps(payload).encode('utf-8')
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': f'Bearer {GROQ_API_KEY}',
+        # 關鍵修復：加入 User-Agent 避免觸發 Cloudflare 1010 防火牆阻擋
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+    req = urllib.request.Request(url, data=data, headers=headers)
+
+    for attempt in range(retries):
         try:
             with urllib.request.urlopen(req) as response:
                 result = json.loads(response.read().decode('utf-8'))
-                return json.loads(result['candidates'][0]['content']['parts'][0]['text'])
+                content = result['choices'][0]['message']['content']
+                return json.loads(content)
         except urllib.error.HTTPError as e:
             error_body = e.read().decode('utf-8')
-            # 遇到 429 (Quota Exceeded) 或 400 (Invalid Key)，嘗試輪替 Key
-            if e.code in [429, 400] and len(keys_list) > 1:
-                print(f"⚠️ API Key 限流或無效 (HTTP {e.code})，嘗試切換 Key... (第 {attempt + 1}/{max_retries} 次)")
-                switch_to_next_key()
-                time.sleep(2)  # 切換 Key 後稍作等待
+            if e.code == 429:
+                print(f"⏳ Groq 限流 (429)，等待 5 秒後重試 (第 {attempt+1}/{retries} 次)...")
+                time.sleep(5)
             else:
-                print(f"❌ Gemini API 錯誤 [{e.code}]: {error_body}")
+                print(f"❌ Groq API 錯誤 ({e.code}): {error_body}")
                 raise e
+    raise Exception("❌ 已達到 Groq API 最大重試次數")
 
-    raise Exception("❌ 所有 Gemini API Keys 皆已達到限額或無效")
 
 def send_line_message(articles):
     if not LINE_CHANNEL_ACCESS_TOKEN or not LINE_USER_ID:
@@ -111,21 +114,17 @@ def send_line_message(articles):
         return
 
     today = datetime.now().strftime("%Y-%m-%d")
-    message_text = f"🤖 AI Daily Digest ({today})\n"
-    message_text += "====================\n\n"
-    
+    message_text = f"🤖 AI Daily Digest ({today})\n====================\n\n"
+
     for idx, item in enumerate(articles[:5], 1):
         message_text += f"{idx}. {item.get('title')}\n"
         for point in item.get('summary', []):
             message_text += f" • {point}\n"
         message_text += f"🔗 原文：{item.get('url')}\n\n"
 
-    url = "https://api.line.me/v2/bot/message/push"
-    payload = {
-        "to": LINE_USER_ID,
-        "messages": [{"type": "text", "text": message_text}]
-    }
-    
+    url = "[https://api.line.me/v2/bot/message/push](https://api.line.me/v2/bot/message/push)"
+    payload = {"to": LINE_USER_ID, "messages": [{"type": "text", "text": message_text}]}
+
     try:
         data = json.dumps(payload).encode('utf-8')
         headers = {
@@ -143,18 +142,17 @@ def fetch_and_summarize():
     print("開始抓取 RSS...")
     for feed_url in RSS_FEEDS:
         try:
-            feed = feedparser.parse(feed_url)
+            feed = feedparser.parse(feed_url, request_headers={'User-Agent': USER_AGENT})
             for entry in feed.entries[:1]:
-                # 清理文字內容
                 title = clean_text(entry.title)
                 raw_summary = clean_text(entry.get('summary', entry.get('title', '')))
-                
+
                 prompt = f"""
                 請分析以下文章並提供繁體中文摘要：
                 標題：{title}
                 內容：{raw_summary[:1000]}
 
-                請嚴格輸出合法 JSON 格式，結構如下：
+                請輸出合法 JSON 格式，結構如下：
                 {{
                     "title": "繁體中文標題",
                     "summary": ["重點1", "重點2", "重點3"],
@@ -162,9 +160,10 @@ def fetch_and_summarize():
                 }}
                 """
                 try:
-                    summary_json = call_gemini_api(prompt)
+                    summary_json = call_groq_api(prompt)
                     articles.append(summary_json)
                     print(f"✅ 成功處理: {title}")
+                    time.sleep(1) # Groq 速度極快，只需短暫停頓
                 except Exception as api_err:
                     print(f"API 失敗 [{title}]: {api_err}")
         except Exception as feed_err:

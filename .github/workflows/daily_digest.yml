@@ -31,22 +31,16 @@ jobs:
 
       - name: Run Fetch News Script
         env:
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         run: python fetch_news.py
 
-      - name: Commit and Push Updated Data
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/assets/data/
+          #- name: Run Fetch News Script
+          #        env:
+          #          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          #          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          #          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+          #        run: python fetch_news.py
 
-          if git diff --staged --quiet; then
-            echo "沒有新產出的 JSON 資料，跳過 commit。"
-          else
-            git commit -m "chore: auto-update daily AI news digest [skip ci]"
-            # 先抓取遠端最新 commit 並 rebase，再 push
-            git pull --rebase origin main
-            git push origin main
           fi
