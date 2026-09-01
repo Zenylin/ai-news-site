@@ -39,7 +39,7 @@ jobs:
         run: python fetch_news.py
 
       - name: Auto Commit and Push New Digest
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "chore: update daily AI news digest [skip ci]"
           file_pattern: "src/assets/data/*.json"
