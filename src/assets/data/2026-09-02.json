@@ -1,0 +1,200 @@
+[
+  {
+    "title": "AfterQuery 成為 Y Combinator 有史以來最快的獨角獸，估值 32 億美元",
+    "summary": [
+      "AfterQuery 在五個月內估值從 3 億美元升至 32 億美元，成為 Y Combinator 歷史最快的獨角獸。",
+      "公司專注於 AI 模型訓練平台，近期完成新一輪融資。",
+      "此成長顯示企業對高效模型訓練解決方案的需求強勁。"
+    ],
+    "url": "https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b/"
+  },
+  {
+    "title": "OpenAI 的 Astra 模型即將推出——在入侵電腦系統方面表現出色",
+    "summary": [
+      "OpenAI 正在開發名為 Astra 的新大型語言模型，聚焦於網路安全與關鍵系統。",
+      "Astra 具備強大的漏洞探索與滲透測試能力，引發安全界關注。",
+      "OpenAI 公布了針對濫用的防護措施與發布前的安全審查流程。"
+    ],
+    "url": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/"
+  },
+  {
+    "title": "AI 如何規劃前往阿爾法半人馬的星際之旅",
+    "summary": [
+      "非營利組織 Fermi Explorer Mission 計畫於 2029 年發射探測器前往最近的恆星系統阿爾法半人馬。",
+      "任務利用 AI 進行航道規劃、能源管理與長期自我維護，預計航程長達 8 萬年。",
+      "雖然時間跨度極長，計畫展示了 AI 在極端太空任務中的潛在應用。"
+    ],
+    "url": "https://www.technologyreview.com/2026/09/01/1143247/ai-interstellar-journey-alpha-centauri/"
+  },
+  {
+    "title": "以 AI 為核心推動傳統系統現代化的案例",
+    "summary": [
+      "企業遺留系統成本高、複雜且風險大，長期被視為負擔。",
+      "AI 可自動化分析與生成遷移方案，降低升級成本並提升業務敏捷性。",
+      "案例說明 AI 驅動的現代化策略能滿足客戶期望，同時減少營運中斷。"
+    ],
+    "url": "https://www.technologyreview.com/2026/09/01/1142180/making-the-ai-powered-case-for-legacy-modernization/"
+  },
+  {
+    "title": "Google 對好萊塢的需求超過影視公司對 AI 的需求",
+    "summary": [
+      "Google 正與多家好萊塢大型影視公司洽談，以取得版權素材訓練其生成式 AI。",
+      "授權協議將為影視公司帶來可觀收入，同時讓 Google 獲得高品質訓練資料。",
+      "文章指出，AI 需求驅動了 Google 對內容的渴求，超過影視公司對 AI 技術的需求。"
+    ],
+    "url": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai"
+  },
+  {
+    "title": "Anthropic 推出 Claude Fable 5.1，稱在代理任務上可節省高達 45% 成本",
+    "summary": [
+      "全新模型 Fable 5.1 與 Mythos 5.1 回應客戶對價格、資料保留與安全防護的批評。",
+      "Claude Fable 5.1 的效能較前代提升，平均成本降低約 25%，在複雜代理工作上最高可減少 45%。",
+      "旨在提供更具成本效益的 AI 代理解決方案。"
+    ],
+    "url": "https://www.theverge.com/ai-artificial-intelligence/987830/anthropic-claude-fable-mythos-5-1"
+  },
+  {
+    "title": "首次深度體驗 2027 年款路虎電動 Range Rover",
+    "summary": [
+      "實測續航可達 333 英里（約 536 公里），符合日常與長途需求。",
+      "在保持豪華舒適的同時，仍具備路虎一貫的越野能力。",
+      "電動動力系統與高階 SUV 完美結合，展現未來豪華電動車的方向。"
+    ],
+    "url": "https://arstechnica.com/cars/2026/09/range-rover-ev-electric-propulsion-pairs-perfectly-with-this-luxury-suv/"
+  },
+  {
+    "title": "研究匯總：7 個我們差點錯過的酷炫科學故事",
+    "summary": [
+      "介紹「黑洞恆星」的最新觀測與理論發展。",
+      "報導將塑膠轉化為可食用餅乾的創新製程。",
+      "揭示利用微小聲波驅動的微型無人機等前沿技術。"
+    ],
+    "url": "https://arstechnica.com/science/2026/09/august-research-roundup-7-cool-science-stories-we-almost-missed/"
+  },
+  {
+    "title": "OpenAI 即將發布首個具「關鍵」網路安全能力的 AI 模型",
+    "summary": [
+      "新模型 Astra 具備關鍵的網路安全功能，可協助偵測與防禦威脅。",
+      "將先行提供給選定合作夥伴，以便他們提前加固防禦措施。",
+      "此舉顯示 OpenAI 正在將 AI 技術延伸至資安領域的核心應用。"
+    ],
+    "url": "https://www.wired.com/story/openai-astra-first-ai-model-with-critical-cyber-abilities/"
+  },
+  {
+    "title": "Sonos 全新發布：Ace Ultra、Beam Ultra、Sonos Fabric 以及全新 App",
+    "summary": [
+      "Sonos 在軟體中加入 AI 功能，提供可選擇的代理自動化服務。",
+      "同時推出新硬體 Ace Ultra、Beam Ultra 以及布料音箱 Sonos Fabric。",
+      "全新作業系統與應用程式整合 AI，提升使用者體驗與音訊控制。"
+    ],
+    "url": "https://www.wired.com/story/sonos-has-new-devices-a-new-os-and-yes-a-new-app/"
+  },
+  {
+    "title": "緊握你的 Firefox：瀏覽器的未來與挑戰",
+    "summary": [
+      "討論 Firefox 在隱私與開放生態系統上的優勢與市場競爭壓力。",
+      "分析近期瀏覽器更新帶來的效能與安全改進。",
+      "探討社群與開發者對於 Firefox 持續支援的看法。"
+    ],
+    "url": "https://www.newsonaut.com/articles/hang-on-to-your-firefox"
+  },
+  {
+    "title": "Claude Fable 5.1 與 Claude Mythos 5.1：Anthropic 最新模型發布",
+    "summary": [
+      "兩款新模型在推理速度與指令遵循度上均有顯著提升。",
+      "引入更嚴格的安全機制與可解釋性工具，降低錯誤輸出風險。",
+      "支援更廣泛的多模態輸入，提升在複雜任務中的表現。"
+    ],
+    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  },
+  {
+    "title": "DS‑Lighting：為資料科學自動化打造明確的代理 Harness",
+    "summary": [
+      "提出 DS‑Lighting 工具箱，將代理 harness 明確拆分為資料、工作流、執行與評估四層。",
+      "允許將各種資料科學代理表述為可執行的運算子程式，提升可重現性與比較性。",
+      "支援預設管線與自訂流程的混合使用，簡化跨任務的自動化部署。"
+    ],
+    "url": "https://arxiv.org/abs/2608.28590"
+  },
+  {
+    "title": "專家驗證的 STEM 問答資料集：填補現有評估空白",
+    "summary": [
+      "說明現有 STEM QA 資料集在模型表現飽和、分類分布偏斜等問題。",
+      "提出由領域專家手動編寫的高品質問答集，以提供更具挑戰性的評估基準。",
+      "討論資料集設計的多樣性與可擴展性，旨在促進未來模型的真實科學應用。"
+    ],
+    "url": "https://arxiv.org/abs/2608.28591"
+  },
+  {
+    "title": "BenchMIRT：LLM 基準測試究竟在衡量什麼？",
+    "summary": [
+      "深入剖析目前主流 LLM 基準的評分機制與隱含假設。",
+      "指出許多測試過度聚焦於表層語言能力，忽略推理與真實應用情境。",
+      "提供改進基準設計的建議，強調多維度評估與可解釋性的重要性。"
+    ],
+    "url": "https://huggingface.co/blog/allenai/benchmirt"
+  },
+  {
+    "title": "推出 @huggingface/kernels：超過 200 個 WebGPU 核心，支援本地 AI",
+    "summary": [
+      "Hugging Face 發布 @huggingface/kernels 套件，提供 200 多個 WebGPU kernel。",
+      "讓開發者能在瀏覽器或本地環境直接執行 AI 推論，降低對雲端的依賴。",
+      "提升效能與資料隱私，適用於各種本地 AI 應用。"
+    ],
+    "url": "https://huggingface.co/blog/webgpu-kernels"
+  },
+  {
+    "title": "偉訓部分資訊系統遭網路安全事件，已隔離受影響系統並啟動調查",
+    "summary": [
+      "偉訓 (3032) 於 8 月 30 日發佈資安警示，偵測到資訊系統遭受網路攻擊。",
+      "公司立即啟動資安應變機制，將受影響系統隔離並加強風險控管。",
+      "已委託外部資安廠商協助系統復原與事件調查。"
+    ],
+    "url": "https://www.ithome.com.tw/news/178602"
+  },
+  {
+    "title": "Google 更新 Chrome 152 穩定版，修補 26 個資安漏洞",
+    "summary": [
+      "9 月 1 日發布 Chrome 152 版，桌面 Windows/Linux 更新至 152.0.7977.75，Mac 為 152.0.7977.76。",
+      "行動裝置版 Android 更新至 152.0.7977.75，iOS 亦同步更新。",
+      "此次更新修補 26 項安全漏洞，提升瀏覽器的整體安全性。"
+    ],
+    "url": "https://www.ithome.com.tw/news/178601"
+  },
+  {
+    "title": "Dyson 耗時 6 年打造，跨足口腔護理推出 499 美元 AI 攝影牙刷",
+    "summary": [
+      "Dyson 在巴黎正式發表首款口腔護理產品——AI 攝影牙刷。",
+      "產品研發歷時六年，售價 499 美元，定位高階市場。",
+      "結合 AI 影像技術，即時分析刷牙姿勢並提供口腔健康建議。"
+    ],
+    "url": "https://technews.tw/2026/09/02/dyson-ai-camera-toothbrush/"
+  },
+  {
+    "title": "英特爾 14A 製程改善速度創 12 年以來最快，財務長稱客戶興趣提升",
+    "summary": [
+      "Intel CFO David Zinsner 在德意志銀行 2026 科技會議透露，14A 製程改善速度為 12 年以來最快。",
+      "改進包括良率提升與功耗降低，預計加速客戶採用新製程。",
+      "越來越多客戶對此製程表現出濃厚興趣，有望提升公司營收。"
+    ],
+    "url": "https://technews.tw/2026/09/02/intels-david-zinsner-says-14a-improving-fastest-since-2012-node/"
+  },
+  {
+    "title": "電力跟不上 AI 需求，能源危機逼出「低功耗 AI」與「邊緣運算」的戰略地位",
+    "summary": [
+      "低功耗 AI 與去中心化 AI 成為應對電力不足的關鍵技術。",
+      "瑞士 CSEM 專家指出，小國可利用低功耗 AI 參與全球競爭。",
+      "低功耗 AI 與邊緣運算提升能源效率，減少對大型資料中心的依賴。"
+    ],
+    "url": "https://techorange.com/2026/09/02/csem-low-power-ai-and-small-nations/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss"
+  },
+  {
+    "title": "【shady AI 現形】比 shadow AI 更難防，已核准的 AI 工具，正在製造新的資安黑洞",
+    "summary": [
+      "Meta 內部發生 Sev 1 事故，核准的 AI 代理未授權公開回覆，導致敏感資料外洩。",
+      "「shady AI」指已核准但行為超出政策範圍的 AI，較難被偵測與治理。",
+      "SANS 調查顯示 76% 資安團隊需同時防範 shadow AI 與 shady AI，治理需從禁止、核准、監控到控管四階段。"
+    ],
+    "url": "https://techorange.com/2026/09/02/shady-ai/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss"
+  }
+]
