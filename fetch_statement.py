@@ -13,53 +13,42 @@ GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
 TAISHIN_PDF_PASSWORD = os.environ.get("TAISHIN_PDF_PASSWORD")
 
 def download_yearly_statements() -> list:
-    """從 Gmail 掃描並下載台新對帳單 PDF (地毯式搜索版)"""
+    """從 Gmail 下載今年所有的台新信用卡對帳單 PDF"""
     if not GMAIL_USER or not GMAIL_APP_PASSWORD:
         print("⚠️ 缺少 Gmail 登入資訊，跳過處理。")
         return []
 
     pdf_paths = []
-    print("🔄 正在連線至 Gmail 進行地毯式搜索...")
+    print("🔄 正在連線至 Gmail，準備深入 [全部郵件] 抓取 2026 年度帳單...")
     try:
         with MailBox('imap.gmail.com').login(GMAIL_USER, GMAIL_APP_PASSWORD) as mailbox:
             
-            print("\n📋 你的 Gmail 擁有的實際資料夾清單：")
-            target_folders = ['INBOX']
-            for folder in mailbox.folder.list():
-                print(f"  - {folder.name}")
-                # 把可能藏帳單的資料夾都加入掃描清單
-                if any(keyword in folder.name for keyword in ['所有郵件', 'All Mail', 'Updates', '重要', 'Important']):
-                    target_folders.append(folder.name)
+            # 🟢 1. 精確指定剛才 Log 掃出來的隱藏資料夾
+            mailbox.folder.set('[Gmail]/全部郵件')
+            print("📁 成功切換至資料夾：[Gmail]/全部郵件")
+
+            # 🟢 2. 移除數量限制，利用 IMAP 伺服器直接過濾出 2026 年 + 來自台新的所有信件
+            emails = mailbox.fetch(A(date_gte=date(2026, 1, 1), from_="taishin"), reverse=True)
             
-            # 去除重複的資料夾
-            target_folders = list(set(target_folders))
-            
-            for folder_name in target_folders:
-                print(f"\n📁 正在掃描資料夾：{folder_name} (搜尋最新 50 封信)")
-                mailbox.folder.set(folder_name)
+            scan_count = 0
+            for msg in emails:
+                scan_count += 1
                 
-                # 🟢 終極放寬：不限制 from_ (寄件人)，我們用 Python 檢查標題
-                emails = mailbox.fetch(A(date_gte=date(2026, 1, 1)), limit=50, reverse=True)
-                
-                for msg in emails:
-                    # 只要標題有台新，我們就印出來看看它的真面目
-                    if "台新" in msg.subject:
-                        print(f"  📧 發現台新信件：{msg.subject}")
-                        print(f"     寄件人：{msg.from_}")
-                        
-                        if not msg.attachments:
-                            print("     ⚠️ 這封信沒有夾帶任何附件！")
-                            continue
+                # 只要標題包含「帳單」或「對帳」，我們就視為目標
+                if "帳單" in msg.subject or "對帳" in msg.subject:
+                    print(f"📧 找到帳單信件：{msg.subject} (日期: {msg.date.strftime('%Y-%m-%d')})")
+                    
+                    for att in msg.attachments:
+                        if att.filename.lower().endswith('.pdf'):
+                            date_str = msg.date.strftime("%Y%m%d")
+                            file_path = f"/tmp/taishin_{date_str}_{att.filename}"
+                            with open(file_path, 'wb') as f:
+                                f.write(att.payload)
+                            print(f"  ✅ 成功下載：{file_path}")
+                            pdf_paths.append(file_path)
                             
-                        for att in msg.attachments:
-                            print(f"     📎 發現附件：{att.filename}")
-                            if att.filename.lower().endswith('.pdf'):
-                                date_str = msg.date.strftime("%Y%m%d")
-                                file_path = f"/tmp/taishin_{date_str}_{att.filename}"
-                                with open(file_path, 'wb') as f:
-                                    f.write(att.payload)
-                                print(f"     ✅ 成功下載 PDF！")
-                                pdf_paths.append(file_path)
+            print(f"\n📊 總共掃描了 {scan_count} 封來自台新的信件。")
+            
     except Exception as e:
         print(f"❌ 收信失敗: {e}")
         
