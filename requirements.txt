@@ -1,0 +1,4 @@
+feedparser>=6.0.10
+yfinance>=0.2.36
+imap-tools>=1.5.0
+pdfplumber>=0.10.3
