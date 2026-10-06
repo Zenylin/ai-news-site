@@ -7,46 +7,62 @@ import urllib.error
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 
 def _send_groq_request(prompt: str, response_format_type: str = "json_object", retries: int = 3):
-    """底層共用的 Groq API 請求函式"""
+    """底層共用的 Groq API 請求函式 (具備自動切換模型機制)"""
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
         raise Exception("❌ 未偵測到 GROQ_API_KEY 環境變數")
 
     url = "https://api.groq.com/openai/v1/chat/completions"
-    payload = {
-        # 🟢 請將原本的 "groq/compound-mini" 改成下面這個官方模型名稱
-        "model": "llama-3.3-70b-versatile",
-        "messages": [
-            {"role": "system", "content": "你是一個專業編輯，請嚴格只輸出合法的 JSON 格式內容。"},
-            {"role": "user", "content": prompt}
-        ],
-        "response_format": {"type": response_format_type},
-        "temperature": 0.2
-    }
-
-    data = json.dumps(payload).encode('utf-8')
     headers = {
         'Content-Type': 'application/json',
         'Authorization': f'Bearer {api_key}',
         'User-Agent': USER_AGENT
     }
-    req = urllib.request.Request(url, data=data, headers=headers)
 
-    for attempt in range(retries):
-        try:
-            with urllib.request.urlopen(req) as response:
-                result = json.loads(response.read().decode('utf-8'))
-                return json.loads(result['choices'][0]['message']['content'])
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
-                wait_time = (attempt + 1) * 15
-                print(f"⏳ Groq 限流 (429)，等待 {wait_time} 秒後重試...")
-                time.sleep(wait_time)
-            else:
-                print(f"❌ Groq API 錯誤 ({e.code}): {e.read().decode('utf-8')}")
-                if attempt == retries - 1:
-                    raise e
-                time.sleep(3)
+    # 備援模型清單 (依序嘗試)
+    fallback_models = [
+        "qwen/qwen3.8-27b", 
+        "openai/gpt-oss-120b", 
+        "openai/gpt-oss-20b",
+        "allam-2-7b"
+    ]
+
+    for model_name in fallback_models:
+        print(f"🔄 嘗試呼叫模型: {model_name} ...")
+        payload = {
+            "model": model_name,
+            "messages": [
+                {"role": "system", "content": "你是一個專業編輯，請嚴格只輸出合法的 JSON 格式內容。"},
+                {"role": "user", "content": prompt}
+            ],
+            "response_format": {"type": response_format_type},
+            "temperature": 0.2
+        }
+
+        data = json.dumps(payload).encode('utf-8')
+        req = urllib.request.Request(url, data=data, headers=headers)
+
+        for attempt in range(retries):
+            try:
+                with urllib.request.urlopen(req) as response:
+                    result = json.loads(response.read().decode('utf-8'))
+                    print(f"✅ 模型 {model_name} 摘要成功！")
+                    return json.loads(result['choices'][0]['message']['content'])
+            except urllib.error.HTTPError as e:
+                if e.code == 429:
+                    wait_time = (attempt + 1) * 15
+                    print(f"⏳ 限流 (429)，等待 {wait_time} 秒後重試...")
+                    time.sleep(wait_time)
+                elif e.code in [404, 400]:
+                    print(f"⚠️ 模型 {model_name} 不支援或無權限 ({e.code})，自動切換下一個...")
+                    break  # 跳出重試迴圈，直接進入外層的下一個模型
+                else:
+                    print(f"❌ API 錯誤 ({e.code}): {e.read().decode('utf-8')}")
+                    if attempt == retries - 1:
+                        break
+                    time.sleep(3)
+                    
+    print("❌ 所有備援模型皆測試失敗！")
     return None
 
 def summarize_news_batch(articles_chunk) -> list:
