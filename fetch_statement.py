@@ -1,6 +1,6 @@
 import os
 import time
-from datetime import datetime
+from datetime import datetime, date
 from imap_tools import MailBox, A
 import pdfplumber
 
@@ -8,38 +8,43 @@ import pdfplumber
 from skills.ai_summarizer import parse_credit_card_statement
 from skills.notifier import send_line_text
 
-# 環境變數
 GMAIL_USER = os.environ.get("GMAIL_USER")
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
-TAISHIN_PDF_PASSWORD = os.environ.get("TAISHIN_PDF_PASSWORD") # 身分證字號
+TAISHIN_PDF_PASSWORD = os.environ.get("TAISHIN_PDF_PASSWORD")
 
-def download_latest_statement() -> str:
-    """從 Gmail 下載最新的台新信用卡對帳單 PDF"""
+def download_yearly_statements() -> list:
+    """從 Gmail 下載今年所有的台新信用卡對帳單 PDF"""
     if not GMAIL_USER or not GMAIL_APP_PASSWORD:
         print("⚠️ 缺少 Gmail 登入資訊，跳過處理。")
-        return None
+        return []
 
-    print("🔄 正在連線至 Gmail 尋找台新對帳單...")
+    pdf_paths = []
+    print("🔄 正在連線至 Gmail 尋找 2026 年的台新對帳單...")
     try:
         with MailBox('imap.gmail.com').login(GMAIL_USER, GMAIL_APP_PASSWORD) as mailbox:
-            # 尋找信件標題包含「台新銀行信用卡綜合對帳單」且有附件的信
-            emails = mailbox.fetch(A(subject="台新銀行信用卡綜合對帳單"), limit=3, reverse=True, charset='utf8')
-
+            # 🟢 終極解法：使用純英文條件 (今年起 + 寄件人包含 taishin)，完全避開中文亂碼
+            emails = mailbox.fetch(A(date_gte=date(2026, 1, 1), from_="taishin"), reverse=True)
+            
             for msg in emails:
-                for att in msg.attachments:
-                    if att.filename.lower().endswith('.pdf'):
-                        file_path = f"/tmp/{att.filename}"
-                        with open(file_path, 'wb') as f:
-                            f.write(att.payload)
-                        print(f"✅ 成功下載對帳單：{att.filename}")
-                        return file_path
+                # 在 Python 端才進行中文標題確認，安全又精準
+                if "對帳單" in msg.subject:
+                    print(f"📧 找到目標信件：{msg.subject}")
+                    for att in msg.attachments:
+                        if att.filename.lower().endswith('.pdf'):
+                            # 檔名加上日期，避免多個月份的 PDF 檔名重複互相覆蓋
+                            date_str = msg.date.strftime("%Y%m%d")
+                            file_path = f"/tmp/taishin_{date_str}_{att.filename}"
+                            with open(file_path, 'wb') as f:
+                                f.write(att.payload)
+                            print(f"  ✅ 成功下載：{file_path}")
+                            pdf_paths.append(file_path)
     except Exception as e:
         print(f"❌ 收信失敗: {e}")
-    return None
+        
+    return pdf_paths
 
 def extract_text_from_pdf(pdf_path: str) -> str:
     """使用密碼解鎖 PDF 並萃取純文字"""
-    print("🔄 正在解密 PDF 並萃取文字...")
     raw_text = ""
     try:
         with pdfplumber.open(pdf_path, password=TAISHIN_PDF_PASSWORD) as pdf:
@@ -47,48 +52,69 @@ def extract_text_from_pdf(pdf_path: str) -> str:
                 text = page.extract_text()
                 if text:
                     raw_text += text + "\n"
-        print("✅ 文字萃取完成！")
         return raw_text
     except Exception as e:
-        print(f"❌ PDF 解析失敗 (密碼錯誤或檔案毀損): {e}")
+        print(f"❌ PDF {pdf_path} 解析失敗: {e}")
         return ""
 
 def main():
-    # 1. 下載對帳單 PDF
-    pdf_path = download_latest_statement()
-    if not pdf_path:
+    # 1. 批次下載今年所有的對帳單
+    pdf_paths = download_yearly_statements()
+    if not pdf_paths:
         print("沒有找到對帳單，結束任務。")
         return
 
-    # 2. 解密並萃取文字
-    raw_text = extract_text_from_pdf(pdf_path)
-    if not raw_text:
-        return
-
-    # 3. 呼叫 AI 進行結構化摘要 (使用 qwen 模型)
-    print("🧠 正在將對帳單交給 AI 分析...")
-    transactions = parse_credit_card_statement(raw_text)
+    all_transactions = []
     
-    if not transactions:
-        print("⚠️️ AI 解析失敗或沒有找到消費紀錄。")
-        return
-
-    # 4. 組合 LINE 訊息並推播
-    today = datetime.now().strftime("%Y-%m-%d")
-    msg = f"💳 台新信用卡對帳單解析 ({today})\n====================\n\n"
-    
-    total_amount = 0
-    for t in transactions:
-        date = t.get("date", "未知日期")
-        merchant = t.get("merchant", "未知商店")
-        amount = t.get("amount", 0)
-        total_amount += int(amount)
-        msg += f"🔹 {date} | {merchant} | ${amount}\n"
+    # 2. 逐一處理每個月份的 PDF
+    print(f"\n🚀 準備解析 {len(pdf_paths)} 份對帳單...")
+    for pdf_path in pdf_paths:
+        print(f"🔄 正在解密與解析 {pdf_path} ...")
+        raw_text = extract_text_from_pdf(pdf_path)
         
-    msg += f"\n💰 總計解析金額：${total_amount}"
+        if raw_text:
+            print("  🧠 交給 AI 提取消費紀錄...")
+            transactions = parse_credit_card_statement(raw_text)
+            if transactions:
+                all_transactions.extend(transactions)
+                print(f"  ✅ 成功提取 {len(transactions)} 筆消費")
+            
+            # 暫停 10 秒，避免連續呼叫 Groq API 導致被限流 (HTTP 429)
+            time.sleep(10) 
+
+    if not all_transactions:
+        print("⚠ AI 解析失敗或沒有找到任何消費紀錄。")
+        return
+
+    # 3. 依照日期排序
+    all_transactions.sort(key=lambda x: x.get("date", ""))
+
+    # 4. 統計與推播 (避免整年幾百筆紀錄洗版 LINE，我們只印總結與最近 15 筆)
+    today = datetime.now().strftime("%Y-%m-%d")
+    total_amount = 0
+    
+    for t in all_transactions:
+        try:
+            total_amount += int(t.get("amount", 0))
+        except:
+            pass
+
+    tx_count = len(all_transactions)
+    msg = f"💳 2026 年度信用卡對帳單總結\n====================\n"
+    msg += f"✅ 共成功解析：{tx_count} 筆消費紀錄\n"
+    msg += f"💰 本年度累積刷卡金額：${total_amount:,}\n\n"
+    msg += "--- 最近 15 筆消費 --- \n"
+    
+    for t in all_transactions[-15:]:
+        date_str = t.get('date', '')
+        merchant = t.get('merchant', '')
+        amount = t.get('amount', 0)
+        msg += f"🔹 {date_str} | {merchant} | ${amount}\n"
+        
+    msg += "\n💡 (完整明細已存在記憶體中，下一步可設定自動寫入 Google Sheets 記帳本！)"
     
     send_line_text(msg)
-    print("📱 記帳推播發送成功！")
+    print("\n📱 年度總結推播發送成功！")
 
 if __name__ == "__main__":
     main()
