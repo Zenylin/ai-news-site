@@ -13,8 +13,10 @@ def _send_groq_request(prompt: str, response_format_type: str = "json_object", r
         raise Exception("❌ 未偵測到 GROQ_API_KEY 環境變數")
 
     url = "https://api.groq.com/openai/v1/chat/completions"
+    
+    # 🟢 固定使用確定可執行的 qwen 模型
     payload = {
-        "model": "llama-prompt-guard-2-86m",
+        "model": "qwen/qwen3.8-27b",
         "messages": [
             {"role": "system", "content": "你是一個專業編輯，請嚴格只輸出合法的 JSON 格式內容。"},
             {"role": "user", "content": prompt}
