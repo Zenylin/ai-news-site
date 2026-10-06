@@ -1,95 +1,46 @@
-import json
-import urllib.request
-import urllib.error
-import time
+from imap_tools import MailBox, A
 
-# 🟢 請在這裡貼上你的 Groq API Key
-TEST_API_KEY = "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"
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+# 🟢 請填入你的 Gmail 與 16 碼應用程式密碼
+GMAIL_ACCOUNT = "joo99887@gmail.com"
+GMAIL_APP_PASSWORD = "juhvqhdofrajzmpk"
 
-def get_available_models():
-    """步驟 1: 取得該金鑰授權的所有模型"""
-    url = "https://api.groq.com/openai/v1/models"
-    headers = {
-        "Authorization": f"Bearer {TEST_API_KEY}",
-        "User-Agent": USER_AGENT
-    }
-    
-    req = urllib.request.Request(url, headers=headers)
-    print("🔄 [步驟 1] 正在向 Groq 查詢你的金鑰授權模型清單...")
-    
+def test_download_pdf():
+    print("🔄 嘗試連線到 Gmail IMAP 伺服器...")
     try:
-        with urllib.request.urlopen(req) as response:
-            result = json.loads(response.read().decode('utf-8'))
-            models = []
-            # 過濾掉 whisper (語音) 模型，只保留文字對話模型
-            for model in result.get("data", []):
-                model_id = model.get("id")
-                if "whisper" not in model_id:
-                    models.append(model_id)
-            return models
-    except urllib.error.HTTPError as e:
-        print(f"❌ 查詢授權清單失敗 (HTTP {e.code}): {e.read().decode('utf-8')}")
-        return []
-
-def test_model_completion(model_name):
-    """步驟 2: 實際發送訊息測試模型是否可用"""
-    url = "https://api.groq.com/openai/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {TEST_API_KEY}",
-        "Content-Type": "application/json",
-        "User-Agent": USER_AGENT
-    }
-    
-    payload = {
-        "model": model_name,
-        "messages": [{"role": "user", "content": "hi"}],
-        "max_tokens": 10  # 限制回覆長度加快測試
-    }
-    
-    req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers)
-    print(f"  👉 測試 [{model_name}] ... ", end="")
-    
-    try:
-        with urllib.request.urlopen(req) as response:
-            result = json.loads(response.read().decode('utf-8'))
-            print("✅ 成功對話！")
-            return True
-    except urllib.error.HTTPError as e:
-        # 解析 Groq 傳回的具體錯誤訊息
-        try:
-            error_info = json.loads(e.read().decode('utf-8'))
-            error_msg = error_info.get("error", {}).get("message", "未知錯誤")
-            print(f"❌ 失敗: {error_msg}")
-        except:
-            print(f"❌ 失敗 (HTTP {e.code})")
-        return False
+        # 登入 Gmail
+        with MailBox('imap.gmail.com').login(GMAIL_ACCOUNT, GMAIL_APP_PASSWORD) as mailbox:
+            print("✅ 登入成功！正在尋找信件...\n")
+            
+            # 尋找最新 3 封「帶有附件」的信件
+            # 如果你要針對台新，可以改成 A(subject="台新", has_attachment=True)
+            emails = mailbox.fetch(A(has_attachment=True), limit=3, reverse=True)
+            
+            found_pdf = False
+            for msg in emails:
+                print(f"📧 檢查信件：{msg.subject}")
+                
+                for att in msg.attachments:
+                    if att.filename.lower().endswith('.pdf'):
+                        print(f"  👉 發現 PDF 附件：{att.filename}")
+                        
+                        # 將檔案存到你執行程式的當前資料夾
+                        save_path = f"./{att.filename}"
+                        with open(save_path, 'wb') as f:
+                            f.write(att.payload)
+                            
+                        print(f"  🎉 成功下載並儲存至：{save_path}\n")
+                        found_pdf = True
+                        break # 載到一個就跳出附件迴圈
+                
+                if found_pdf:
+                    break # 測試成功，跳出信件迴圈
+            
+            if not found_pdf:
+                print("⚠️ 最近的信件中沒有找到 PDF 附件。建議你先用其他信箱寄一封帶有 PDF 的信給自己測試！")
+                
+    except Exception as e:
+        print(f"❌ 發生錯誤: {e}")
+        print("💡 提示：如果是 Authentication Failed，請確認是否使用了「應用程式密碼」而非原本的登入密碼。")
 
 if __name__ == "__main__":
-    if not TEST_API_KEY.startswith("gsk_"):
-        print("⚠ 請先將 TEST_API_KEY 替換為你的真實金鑰")
-    else:
-        # 1. 取得模型清單
-        available_models = get_available_models()
-        
-        if available_models:
-            print(f"✅ 成功取得 {len(available_models)} 個文字模型，開始逐一測試 (這可能需要幾秒鐘)...\n")
-            print("=" * 60)
-            
-            working_models = []
-            # 2. 逐一測試
-            for model in available_models:
-                if test_model_completion(model):
-                    working_models.append(model)
-                time.sleep(1) # 避免打太快被限流
-                
-            print("=" * 60)
-            
-            # 3. 統整結果
-            if working_models:
-                print("\n🎉 測試完畢！以下模型確定可以使用：")
-                for m in working_models:
-                    print(f"  - {m}")
-                print("\n💡 請挑選上方【任何一個】模型名稱，替換掉 GitHub 專案裡的 'model' 參數即可！")
-            else:
-                print("\n⚠️ 測試完畢，雖然抓得到清單，但沒有任何模型可供對話。請檢查帳號額度狀態。")
+    test_download_pdf()

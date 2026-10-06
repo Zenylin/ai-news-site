@@ -84,3 +84,29 @@ def summarize_stock_news(title: str) -> str:
     """
     res = _send_groq_request(prompt)
     return res.get("summary", "無摘要") if res else title
+
+def parse_credit_card_statement(raw_text: str) -> list:
+    """將信用卡對帳單的原始文字解析為結構化 JSON"""
+    prompt = f"""
+    請幫我分析以下信用卡對帳單的原始文字。
+    你需要精準提取出每一筆「消費紀錄」，並忽略繳款紀錄、紅利點數、循環利息等無關資訊。
+    
+    請注意：金額請轉換為純數字。日期請統一轉換為 YYYY-MM-DD 格式（假設年份為今年）。
+
+    請嚴格輸出 JSON 格式如下：
+    {{
+      "transactions": [
+        {{"date": "2026-10-05", "merchant": "全聯福利中心", "amount": 500}},
+        {{"date": "2026-10-06", "merchant": "台灣高鐵", "amount": 1200}}
+      ]
+    }}
+
+    原始對帳單文字：
+    {raw_text}
+    """
+    
+    # 呼叫你原本寫好的 _send_groq_request
+    res = _send_groq_request(prompt)
+    
+    # 如果有成功解析，就回傳 transactions 陣列；否則回傳空陣列
+    return res.get("transactions", []) if res else []
