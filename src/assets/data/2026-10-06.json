@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "title": "OpenAI 將於歐盟為 ChatGPT 文字輸出加入浮水印以符合 AI 法",
+    "summary": [
+      "OpenAI 宣布將根據歐盟《人工智慧法》（AI Act）要求，在歐盟地區的 ChatGPT 與 Codex 文字輸出中嵌入浮水印。",
+      "該技術名為 textGrain，旨在讓 AI 生成內容可被識別，但 OpenAI 指出編輯行為可能使隱形標記較難偵測。",
+      "即日起，全球 API 客戶也可針對部分模型自行啟用此文字浮水印功能。"
+    ],
+    "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/"
+  },
+  {
+    "title": "Reflection 推出開放權重 AI 模型 Beam，以更低算力成本挑戰中國模型",
+    "summary": [
+      "Reflection 發布名為 Beam 的開放權重 AI 模型，主打以較低的計算成本與中國 AI 模型競爭。",
+      "該公司目標客戶為企業及主權國家，推銷建立「AI 工廠」的概念。",
+      "透過訓練 Reflection 的模型於機構自有專有數據上，讓機構能建立自訂的本地化 AI 系統。"
+    ],
+    "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+  },
+  {
+    "title": "OpenAI 推出 textGrain 文字浮水印技術，因應歐盟 AI 法令要求",
+    "summary": [
+      "OpenAI 於 10 月 5 日公布文字浮水印技術 textGrain，計畫在未來幾週內導入歐盟地區的 ChatGPT 與 Codex。",
+      "此舉是為了滿足歐盟《人工智慧法》對 AI 生成內容必須具備辨識標記的規定。",
+      "該功能即日起開放給全球 API 客戶，允許其針對特定模型自行啟用文字浮水印。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179435"
+  },
+  {
+    "title": "Debian 修補 Linux 核心 1,313 個漏洞，CVE 數量暴增引發關注",
+    "summary": [
+      "Debian 於 9 月 29 日發布資安公告，列出 Linux 核心中高達 1,313 個漏洞。",
+      "這些漏洞涉及權限提升、服務阻斷及資訊洩漏等風險，影響 Debian 穩定版 Trixie 的 Linux 核心套件 6.12.107-1。",
+      "官方建議用戶將系統更新至 6.12.111-1 版本以修復這些安全問題。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179434"
+  }
+]
