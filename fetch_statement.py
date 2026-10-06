@@ -13,41 +13,53 @@ GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
 TAISHIN_PDF_PASSWORD = os.environ.get("TAISHIN_PDF_PASSWORD")
 
 def download_yearly_statements() -> list:
-    """從 Gmail 下載今年所有的台新信用卡對帳單 PDF"""
+    """從 Gmail 掃描並下載台新對帳單 PDF (地毯式搜索版)"""
     if not GMAIL_USER or not GMAIL_APP_PASSWORD:
         print("⚠️ 缺少 Gmail 登入資訊，跳過處理。")
         return []
 
     pdf_paths = []
-    print("🔄 正在連線至 Gmail 尋找 2026 年的台新對帳單...")
+    print("🔄 正在連線至 Gmail 進行地毯式搜索...")
     try:
         with MailBox('imap.gmail.com').login(GMAIL_USER, GMAIL_APP_PASSWORD) as mailbox:
             
-            # 🟢 終極修正：動態列出你的所有資料夾，自動尋找「所有郵件」
-            target_folder = 'INBOX' # 預設使用收件匣
+            print("\n📋 你的 Gmail 擁有的實際資料夾清單：")
+            target_folders = ['INBOX']
             for folder in mailbox.folder.list():
-                if '所有郵件' in folder.name or 'All Mail' in folder.name:
-                    target_folder = folder.name
-                    break
+                print(f"  - {folder.name}")
+                # 把可能藏帳單的資料夾都加入掃描清單
+                if any(keyword in folder.name for keyword in ['所有郵件', 'All Mail', 'Updates', '重要', 'Important']):
+                    target_folders.append(folder.name)
             
-            # 安全地切換到確定存在的資料夾
-            mailbox.folder.set(target_folder)
-            print(f"📁 成功切換至資料夾：{target_folder}")
-
-            # 放寬 IMAP 條件：今年起 + 寄件人包含 taishin
-            emails = mailbox.fetch(A(date_gte=date(2026, 1, 1), from_="taishin"), reverse=True)
+            # 去除重複的資料夾
+            target_folders = list(set(target_folders))
             
-            for msg in emails:
-                if "台新" in msg.subject and "帳單" in msg.subject:
-                    print(f"📧 找到目標信件：{msg.subject}")
-                    for att in msg.attachments:
-                        if att.filename.lower().endswith('.pdf'):
-                            date_str = msg.date.strftime("%Y%m%d")
-                            file_path = f"/tmp/taishin_{date_str}_{att.filename}"
-                            with open(file_path, 'wb') as f:
-                                f.write(att.payload)
-                            print(f"  ✅ 成功下載：{file_path}")
-                            pdf_paths.append(file_path)
+            for folder_name in target_folders:
+                print(f"\n📁 正在掃描資料夾：{folder_name} (搜尋最新 50 封信)")
+                mailbox.folder.set(folder_name)
+                
+                # 🟢 終極放寬：不限制 from_ (寄件人)，我們用 Python 檢查標題
+                emails = mailbox.fetch(A(date_gte=date(2026, 1, 1)), limit=50, reverse=True)
+                
+                for msg in emails:
+                    # 只要標題有台新，我們就印出來看看它的真面目
+                    if "台新" in msg.subject:
+                        print(f"  📧 發現台新信件：{msg.subject}")
+                        print(f"     寄件人：{msg.from_}")
+                        
+                        if not msg.attachments:
+                            print("     ⚠️ 這封信沒有夾帶任何附件！")
+                            continue
+                            
+                        for att in msg.attachments:
+                            print(f"     📎 發現附件：{att.filename}")
+                            if att.filename.lower().endswith('.pdf'):
+                                date_str = msg.date.strftime("%Y%m%d")
+                                file_path = f"/tmp/taishin_{date_str}_{att.filename}"
+                                with open(file_path, 'wb') as f:
+                                    f.write(att.payload)
+                                print(f"     ✅ 成功下載 PDF！")
+                                pdf_paths.append(file_path)
     except Exception as e:
         print(f"❌ 收信失敗: {e}")
         
