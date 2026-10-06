@@ -23,21 +23,21 @@ def download_yearly_statements() -> list:
     try:
         with MailBox('imap.gmail.com').login(GMAIL_USER, GMAIL_APP_PASSWORD) as mailbox:
             
-            # 🟢 關鍵修正 1：嘗試切換到「所有郵件」資料夾 (把被自動歸檔的信也找出來)
-            # 因為 Gmail 語系不同，名稱可能是中文或英文，我們兩種都試
-            try:
-                mailbox.folder.set('[Gmail]/所有郵件')
-            except:
-                try:
-                    mailbox.folder.set('[Gmail]/All Mail')
-                except:
-                    pass # 如果都找不到，就留在預設的收件匣 (INBOX)
+            # 🟢 終極修正：動態列出你的所有資料夾，自動尋找「所有郵件」
+            target_folder = 'INBOX' # 預設使用收件匣
+            for folder in mailbox.folder.list():
+                if '所有郵件' in folder.name or 'All Mail' in folder.name:
+                    target_folder = folder.name
+                    break
+            
+            # 安全地切換到確定存在的資料夾
+            mailbox.folder.set(target_folder)
+            print(f"📁 成功切換至資料夾：{target_folder}")
 
             # 放寬 IMAP 條件：今年起 + 寄件人包含 taishin
             emails = mailbox.fetch(A(date_gte=date(2026, 1, 1), from_="taishin"), reverse=True)
             
             for msg in emails:
-                # 🟢 關鍵修正 2：放寬標題過濾條件，只要同時包含「台新」跟「帳單」就抓
                 if "台新" in msg.subject and "帳單" in msg.subject:
                     print(f"📧 找到目標信件：{msg.subject}")
                     for att in msg.attachments:
