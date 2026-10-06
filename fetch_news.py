@@ -3,43 +3,19 @@ import json
 import re
 import time
 import feedparser
-import urllib.request
-import urllib.error
 from datetime import datetime
 
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-LINE_CHANNEL_ACCESS_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
-LINE_USER_ID = os.environ.get("LINE_USER_ID")
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+# 從共用技能庫載入模組
+from skills.ai_summarizer import summarize_news_batch
+from skills.notifier import send_news_flex_message
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 
-# 擴充後的 RSS 來源
 RSS_FEEDS = [
-    # 國外科技媒體
     "https://techcrunch.com/category/artificial-intelligence/feed/",
-    "https://www.technologyreview.com/feed/",
-    "https://feeds.feedburner.com/VentureBeat",
-    "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-    "https://feeds.arstechnica.com/arstechnica/index",
-    "https://www.wired.com/feed/tag/ai/latest/rss",
-    "https://www.artificialintelligence-news.com/feed/",
-    
-    # 開發者與論文社群
-    "https://news.ycombinator.com/rss",
-    "https://paperswithcode.com/rss/latest",
-    "https://rss.arxiv.org/rss/cs.AI",
-    "https://huggingface.co/blog/feed.xml",
-    
-    # 精選電子報
-    "https://tldr.tech/ai/rss",
-    "https://bensbites.beehiiv.com/feed",
-    
-    # 國內科技媒體
     "https://www.ithome.com.tw/rss",
     "https://www.inside.com.tw/feed",
-    "https://technews.tw/feed/",
-    "https://buzzorange.com/techorange/feed/"
+    # ... 其他你想保留的網址
 ]
 
 def clean_text(text):
@@ -48,164 +24,25 @@ def clean_text(text):
     text = re.sub(r'<[^>]+>', '', text)
     return text.replace('"', "'").replace('\n', ' ').replace('\r', '').strip()
 
-def call_groq_api_batch(articles_chunk, retries=5):
-    """批次將多篇新聞一次發送給 API 處理，大幅減少 API 請求次數」"""
-    if not GROQ_API_KEY:
-        raise Exception("❌ 未偵測到 GROQ_API_KEY 環境變數")
-
-    prompt = "請分析以下多篇新聞，並分別提供繁體中文標題與 2~3 點摘要。\n\n"
-    for idx, item in enumerate(articles_chunk, 1):
-        prompt += f"--- 新聞 {idx} ---\n標題：{item['raw_title']}\n內容：{item['raw_summary'][:800]}\n鏈結：{item['url']}\n\n"
-
-    prompt += """
-請嚴格輸出合法 JSON 格式，結構如下：
-{
-  "articles": [
-    {
-      "title": "繁體中文標題",
-      "summary": ["重點1", "重點2", "重點3"],
-      "url": "原文鏈結"
-    }
-  ]
-}
-"""
-
-    url = "https://api.groq.com/openai/v1/chat/completions"
-    payload = {
-        "model": "groq/compound-mini",
-        "messages": [
-            {"role": "system", "content": "你是一個專業科技新聞編輯，請嚴格只輸出合法的 JSON 格式內容。"},
-            {"role": "user", "content": prompt}
-        ],
-        "response_format": {"type": "json_object"},
-        "temperature": 0.2
-    }
-
-    data = json.dumps(payload).encode('utf-8')
-    headers = {
-        'Content-Type': 'application/json',
-        'Authorization': f'Bearer {GROQ_API_KEY}',
-        'User-Agent': USER_AGENT
-    }
-    req = urllib.request.Request(url, data=data, headers=headers)
-
-    for attempt in range(retries):
-        try:
-            with urllib.request.urlopen(req) as response:
-                result = json.loads(response.read().decode('utf-8'))
-                content = result['choices'][0]['message']['content']
-                return json.loads(content).get("articles", [])
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
-                # 重試等待拉長：15s, 30s, 45s... 確保給予 Groq 額度充份冷卻時間
-                wait_time = (attempt + 1) * 15
-                print(f"⏳ Groq 限流 (429)，等待 {wait_time} 秒後重試 (第 {attempt+1}/{retries} 次)...")
-                time.sleep(wait_time)
-            else:
-                print(f"❌ Groq API 錯誤 ({e.code}): {e.read().decode('utf-8')}")
-                raise e
-    raise Exception("❌ 已達到 Groq API 最大重試次數")
-
-def send_line_message(articles):
-    if not LINE_CHANNEL_ACCESS_TOKEN or not LINE_USER_ID:
-        print("⚠️ 未設定 LINE Token 或 User ID，跳過 LINE 通報。")
-        return
-
-    today = datetime.now().strftime("%Y-%m-%d")
-    bubbles = []
-    
-    for idx, item in enumerate(articles[:10], 1):
-        title = item.get("title", "無標題")
-        url = item.get("url", "#")
-        summaries = item.get("summary", [])
-
-        summary_components = [
-            {
-                "type": "text",
-                "text": f"• {point}",
-                "size": "xs",
-                "color": "#666666",
-                "wrap": True,
-                "margin": "xs"
-            } for point in summaries[:3]
-        ]
-
-        bubble = {
-            "type": "bubble",
-            "size": "micro",
-            "header": {
-                "type": "box",
-                "layout": "vertical",
-                "backgroundColor": "#1DB446",
-                "contents": [{"type": "text", "text": f"NO. {idx}", "weight": "bold", "color": "#FFFFFF", "size": "xs"}]
-            },
-            "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                    {"type": "text", "text": title, "weight": "bold", "size": "sm", "wrap": True, "maxLines": 2},
-                    {"type": "separator", "margin": "md"},
-                    {"type": "box", "layout": "vertical", "margin": "md", "contents": summary_components}
-                ]
-            },
-            "footer": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                    {
-                        "type": "button",
-                        "style": "primary",
-                        "color": "#1DB446",
-                        "height": "sm",
-                        "action": {"type": "uri", "label": "閱讀原文", "uri": url}
-                    }
-                ]
-            }
-        }
-        bubbles.append(bubble)
-
-    flex_payload = {
-        "to": LINE_USER_ID,
-        "messages": [
-            {
-                "type": "flex",
-                "altText": f"🤖 AI Daily Digest ({today}) 新聞卡片推送",
-                "contents": {"type": "carousel", "contents": bubbles}
-            }
-        ]
-    }
-
-    url = "https://api.line.me/v2/bot/message/push"
-    try:
-        data = json.dumps(flex_payload).encode('utf-8')
-        headers = {
-            'Content-Type': 'application/json',
-            'Authorization': f'Bearer {LINE_CHANNEL_ACCESS_TOKEN}'
-        }
-        req = urllib.request.Request(url, data=data, headers=headers)
-        with urllib.request.urlopen(req) as resp:
-            print(f"📱 LINE Flex Message 卡片推播發送成功！（共 {len(bubbles)} 頁卡片）")
-    except Exception as e:
-        print(f"❌ LINE Flex Message 發送失敗: {e}")
-
 def fetch_and_summarize():
     today = datetime.now().strftime("%Y-%m-%d")
     output_dir = "src/assets/data"
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, f"{today}.json")
 
-    # 快取檢查
+    # 1. 快取檢查
     if os.path.exists(output_file):
         try:
             with open(output_file, "r", encoding="utf-8") as f:
                 articles = json.load(f)
             if articles:
-                print(f"📁 發現今日 ({today}) 已有抓取紀錄 ({len(articles)} 篇)，直接發送 LINE 推播...")
-                send_line_message(articles)
+                print(f"📁 發現今日 ({today}) 已有抓取紀錄，直接發送 LINE 推播...")
+                send_news_flex_message(articles)
                 return
-        except Exception as read_err:
-            print(f"⚠️ 讀取快取失敗 ({read_err})，重新執行抓取...")
+        except Exception:
+            pass
 
+    # 2. 抓取 RSS
     raw_articles = []
     print("開始抓取 RSS 原文...")
     for feed_url in RSS_FEEDS:
@@ -220,25 +57,25 @@ def fetch_and_summarize():
         except Exception as feed_err:
             print(f"RSS 失敗 [{feed_url}]: {feed_err}")
 
-    # 批次分組處理（一次 5 篇）
+    # 3. 呼叫技能進行分析
     processed_articles = []
     chunk_size = 5
     for i in range(0, len(raw_articles), chunk_size):
         chunk = raw_articles[i:i + chunk_size]
         print(f"🚀 正在批次分析第 {i+1} ~ {i+len(chunk)} 篇新聞...")
         try:
-            res_list = call_groq_api_batch(chunk)
+            res_list = summarize_news_batch(chunk)
             processed_articles.extend(res_list)
-            # 批次之間間隔 10 秒
-            time.sleep(10)
+            time.sleep(10) # 避免 API 限流
         except Exception as err:
             print(f"❌ 批次處理失敗: {err}")
 
+    # 4. 儲存與發送
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(processed_articles, f, ensure_ascii=False, indent=2)
 
     if processed_articles:
-        send_line_message(processed_articles)
+        send_news_flex_message(processed_articles)
 
 if __name__ == "__main__":
     fetch_and_summarize()
