@@ -14,7 +14,8 @@ def _send_groq_request(prompt: str, response_format_type: str = "json_object", r
 
     url = "https://api.groq.com/openai/v1/chat/completions"
     payload = {
-        "model": "groq/compound-mini",
+        # 🟢 請將原本的 "groq/compound-mini" 改成下面這個官方模型名稱
+        "model": "llama-3.3-70b-versatile",
         "messages": [
             {"role": "system", "content": "你是一個專業編輯，請嚴格只輸出合法的 JSON 格式內容。"},
             {"role": "user", "content": prompt}
