@@ -23,8 +23,8 @@ def download_latest_statement() -> str:
     try:
         with MailBox('imap.gmail.com').login(GMAIL_USER, GMAIL_APP_PASSWORD) as mailbox:
             # 尋找信件標題包含「台新銀行信用卡綜合對帳單」且有附件的信
-            emails = mailbox.fetch(A(subject="台新銀行信用卡綜合對帳單", has_attachment=True), limit=1, reverse=True)
-            
+            emails = mailbox.fetch(A(subject="台新銀行信用卡綜合對帳單"), limit=3, reverse=True)
+
             for msg in emails:
                 for att in msg.attachments:
                     if att.filename.lower().endswith('.pdf'):
