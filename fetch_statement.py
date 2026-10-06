@@ -37,13 +37,16 @@ def download_yearly_statements() -> list:
                 sender = str(msg.from_).lower()
                 subject = str(msg.subject)
                 
-                # 🟢 只要寄件人包含 taishin、或主旨包含台新/帳單，我們就印出來檢查
-                is_taishin = "taishin" in sender or "台新" in subject
-                is_statement = "帳單" in subject or "對帳" in subject or "statement" in subject.lower()
+                # 嚴格過濾條件：
+                # 1. 寄件人必須是台新銀行官方網域
+                is_taishin_official = "taishinbank.com.tw" in sender
                 
-                if is_taishin or is_statement:
+                # 2. 主旨必須包含真正的帳單關鍵字（排除登入通知、轉帳、行銷廣告）
+                is_statement_subject = any(keyword in subject for keyword in ["綜合對帳單", "電子帳單", "信用卡帳單", "消費明細"])
+                
+                if is_taishin_official and is_statement_subject:
                     matched_count += 1
-                    print(f"📧 命中目標信件：[{subject}] (寄件人: {msg.from_})")
+                    print(f"📧 命中真正的台新帳單：[{subject}] (寄件人: {msg.from_})")
                     
                     if not msg.attachments:
                         print("     ⚠️ 這封信沒有附件")
@@ -56,7 +59,7 @@ def download_yearly_statements() -> list:
                             file_path = f"/tmp/taishin_{date_str}_{att.filename}"
                             with open(file_path, 'wb') as f:
                                 f.write(att.payload)
-                            print(f"     ✅ 成功下載 PDF：{file_path}")
+                            print(f"     ✅ 成功下載對帳單 PDF：{file_path}")
                             pdf_paths.append(file_path)
                             
             print(f"\n📊 統計：總共掃描了 {scan_count} 封 2026 年的信件，其中符合台新/帳單條件的有 {matched_count} 封。")
