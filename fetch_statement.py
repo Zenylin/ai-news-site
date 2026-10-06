@@ -22,16 +22,26 @@ def download_yearly_statements() -> list:
     print("🔄 正在連線至 Gmail 尋找 2026 年的台新對帳單...")
     try:
         with MailBox('imap.gmail.com').login(GMAIL_USER, GMAIL_APP_PASSWORD) as mailbox:
-            # 🟢 終極解法：使用純英文條件 (今年起 + 寄件人包含 taishin)，完全避開中文亂碼
+            
+            # 🟢 關鍵修正 1：嘗試切換到「所有郵件」資料夾 (把被自動歸檔的信也找出來)
+            # 因為 Gmail 語系不同，名稱可能是中文或英文，我們兩種都試
+            try:
+                mailbox.folder.set('[Gmail]/所有郵件')
+            except:
+                try:
+                    mailbox.folder.set('[Gmail]/All Mail')
+                except:
+                    pass # 如果都找不到，就留在預設的收件匣 (INBOX)
+
+            # 放寬 IMAP 條件：今年起 + 寄件人包含 taishin
             emails = mailbox.fetch(A(date_gte=date(2026, 1, 1), from_="taishin"), reverse=True)
             
             for msg in emails:
-                # 在 Python 端才進行中文標題確認，安全又精準
-                if "對帳單" in msg.subject:
+                # 🟢 關鍵修正 2：放寬標題過濾條件，只要同時包含「台新」跟「帳單」就抓
+                if "台新" in msg.subject and "帳單" in msg.subject:
                     print(f"📧 找到目標信件：{msg.subject}")
                     for att in msg.attachments:
                         if att.filename.lower().endswith('.pdf'):
-                            # 檔名加上日期，避免多個月份的 PDF 檔名重複互相覆蓋
                             date_str = msg.date.strftime("%Y%m%d")
                             file_path = f"/tmp/taishin_{date_str}_{att.filename}"
                             with open(file_path, 'wb') as f:
