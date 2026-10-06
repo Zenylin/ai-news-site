@@ -1,0 +1,200 @@
+[
+  {
+    "title": "據報導，Crusoe 以 300 億美元估值籌集 30 億美元",
+    "summary": [
+      "資料中心開發商 Crusoe 獲得與 Jane Street 高達 130 億美元的合約。",
+      "本輪融資募集 30 億美元，使公司估值達 300 億美元。",
+      "資金將加速其邊緣運算與能源效率的資料中心佈局。"
+    ],
+    "url": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/"
+  },
+  {
+    "title": "據報導，Accel 正洽談領投 10 億美元輪次，Thinking Machines 估值 400 億美元",
+    "summary": [
+      "AI 初創公司 Thinking Machines 年度收入跑道已超過 1 億美元。",
+      "Accel 可能領投高達 10 億美元的融資，估值定在 400 億美元。",
+      "此舉顯示市場對先進 AI 計算平台的高度期待。"
+    ],
+    "url": "https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/"
+  },
+  {
+    "title": "The Download：重新思考兒童安全與化石燃料農業",
+    "summary": [
+      "報導指出美國家長對數位危害的恐懼日增，轉向使用內容監控應用程式。",
+      "呼籲對兒童監測軟體進行重新設計，以平衡隱私與安全。",
+      "同時探討化石燃料驅動的農業對環境的衝擊，倡導更永續的耕作方式。"
+    ],
+    "url": "https://www.technologyreview.com/2026/09/03/1143385/the-download-rethinking-child-safety-online-fossil-fuels-farming/"
+  },
+  {
+    "title": "農業依賴化石燃料，代價高昂",
+    "summary": [
+      "全球化石燃料價格上漲直接推高農業肥料成本。",
+      "伊朗衝突的波及效應使肥料供應鏈更為緊張。",
+      "文章呼籲加速發展低碳或替代能源的農業技術，以降低長期成本。"
+    ],
+    "url": "https://www.technologyreview.com/2026/09/03/1143320/fertilizer-prices-fossil-fuels/"
+  },
+  {
+    "title": "OpenAI 下一代大型 AI 模型宣稱已進入 AGI 時代",
+    "summary": [
+      "OpenAI 發布新模型 GPT‑6 Astra，稱在網路安全、專業工作、軟體工程、科學等領域有世代性突破。",
+      "此模型首次被標註符合 OpenAI 的「關鍵網路安全能力門檻」。",
+      "公司承諾在保持安全的前提下，讓模型在更廣泛的實務應用中發揮效能。"
+    ],
+    "url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release"
+  },
+  {
+    "title": "Nvidia 推出免費工具，將閒置電腦串聯成個人 AI 數據中心",
+    "summary": [
+      "Nvidia 發布名為 Personal AI Router（PAIR）的開源軟體，可將家中多台電腦資源整合，用於本地 AI 推論。",
+      "支援 Ollama、LM Studio 等工具，讓 RTX、MacBook 等硬體上運行大型語言模型成為可能。",
+      "強調不是硬體路由器，免費提供，目標降低本地 AI 計算的門檻。"
+    ],
+    "url": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook"
+  },
+  {
+    "title": "報導：RFK Jr. 命令刪除麻疹死亡紀錄；CDC 仍暗中統計",
+    "summary": [
+      "報導稱 RFK Jr. 介入 CDC，指示刪除麻疹死亡案例的官方紀錄。",
+      "CDC 工作人員已接受相關死亡報告，但被要求隱藏或刪除這些資料。",
+      "即使刪除，CDC 仍在內部持續統計麻疹死亡數據，未向外界公開。"
+    ],
+    "url": "https://arstechnica.com/health/2026/09/reports-rfk-jr-ordered-measles-deaths-deletion-cdc-still-secretly-counts-them/"
+  },
+  {
+    "title": "Xbox 對 Game Pass 遊戲串流實施嚴苛新時限",
+    "summary": [
+      "Xbox 為超過百萬 Game Pass 用戶設定更嚴格的串流時間上限。",
+      "使用量超過限制的玩家需額外付費或會被限制串流時長。",
+      "此舉旨在降低伺服器負載與成本，但引發用戶不滿與抗議。"
+    ],
+    "url": "https://arstechnica.com/gaming/2026/09/xbox-imposes-harsh-new-time-limits-for-game-pass-game-streaming/"
+  },
+  {
+    "title": "沒有人說明 OpenAI 與 Anthropic 今日宕機原因",
+    "summary": [
+      "ChatGPT、Claude、Grok 等大型語言模型服務同時發生宕機。",
+      "相關公司未提供明確的故障說明，資訊透明度不足。",
+      "此事件凸顯雲端 AI 服務的可靠性與依賴風險。"
+    ],
+    "url": "https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/"
+  },
+  {
+    "title": "預測市場投注導致人被封禁與逮捕",
+    "summary": [
+      "預測市場平台因用戶投注涉及非法或敏感資訊而被封禁、逮捕。",
+      "文章同時探討 Flock 的 AI 警察搜尋工具及其爭議。",
+      "討論科技界對「流氓」AI 代理人的認知不足與溝通問題。"
+    ],
+    "url": "https://www.wired.com/story/prediction-market-betting-is-getting-people-banned-and-arrested/"
+  },
+  {
+    "title": "GPT-6 Astra",
+    "summary": [
+      "OpenAI 公布了 GPT-6 Astra 的相關資訊。",
+      "目前僅有簡短說明與評論，細節尚未完整揭露。",
+      "預計未來將推出，具體功能與規格仍待公布。"
+    ],
+    "url": "https://openai.com/index/gpt-6-astra/"
+  },
+  {
+    "title": ".name 終止服務",
+    "summary": [
+      "Neil Fraser 宣布 .name 頂級域名服務將於近期終止。",
+      "使用者需要在截止日期前遷移或註銷其域名。",
+      "公告中說明了終止的時間表與後續處理方式。"
+    ],
+    "url": "https://neil.fraser.name/news/2026/09/03/"
+  },
+  {
+    "title": "EvalDetectBench：前沿語言模型評估感知測量基準",
+    "summary": [
+      "提出 EvalDetectBench，用於衡量大型語言模型的評估感知能力。",
+      "可與任何支援 Inspect 的評估流程結合，提供開放式測試管線。",
+      "內含新整理的轉錄套件，涵蓋系統卡與真實部署來源，以檢測模型在評估與實際使用間的行為差異。"
+    ],
+    "url": "https://arxiv.org/abs/2609.01611"
+  },
+  {
+    "title": "元倫理與 AI：探索 AI 時代的新興元倫理問題",
+    "summary": [
+      "探討若未來 AI 具備道德推理、意向與反思能力時所產生的元倫理挑戰。",
+      "提出條件性與方法論框架，以辨識可能出現的 AI 自身倫理問題。",
+      "將元倫理研究劃分為四個領域，區分 AI 自主倫理與人類賦予的倫理原則。"
+    ],
+    "url": "https://arxiv.org/abs/2609.01685"
+  },
+  {
+    "title": "NeoMME：高效多模態原生與多語言編碼器",
+    "summary": [
+      "介紹 NeoMME 作為原生多模態且支援多語言的編碼模型。",
+      "強調其在計算效能與資源使用上的高效率表現。",
+      "模型與使用說明已於 Hugging Face 部落格發布，供開發者下載與應用。"
+    ],
+    "url": "https://huggingface.co/blog/Hcompany/neomme"
+  },
+  {
+    "title": "微調 350M 模型以在 100 步 GRPO 中獲得更佳結構化輸出",
+    "summary": [
+      "使用 GRPO（Generalized Reinforcement Policy Optimization）於 TRL 框架微調 350M 參數模型。",
+      "僅需 100 步即可顯著提升結構化輸出品質。",
+      "提供開源實驗與程式碼，詳見 Hugging Face 部落格。"
+    ],
+    "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct"
+  },
+  {
+    "title": "Mozilla 推出 Firefox 155 改版，緩解近 30 個弱點",
+    "summary": [
+      "Firefox 155 於 9 月 1 日發布，加入 AI 聊天功能 Smart Window 試用。",
+      "網址列新增顯示被封鎖追蹤器數量的指示。",
+      "導入容器（Container）多帳號分隔機制的排序功能。"
+    ],
+    "url": "https://www.ithome.com.tw/news/178693"
+  },
+  {
+    "title": "Nvidia 宣布以 129.3 億美元收購 Hugging Face",
+    "summary": [
+      "Nvidia 同意以約 129.3 億美元併購 Hugging Face，交易預計明年完成。",
+      "雙方將共同擴展平台規模與基礎設施。",
+      "目標加強全球開發者與機構取得 AI 技術的管道。"
+    ],
+    "url": "https://www.ithome.com.tw/news/178690"
+  },
+  {
+    "title": "NAND Flash 需求增長速度前所未見、鎧俠股價飆漲",
+    "summary": [
+      "NAND Flash 需求增速創歷史新高，驅動記憶體市場快速成長。",
+      "Kioxia（鎧俠）舉行技術說明會，展示新技術與產能擴充計畫。",
+      "受需求刺激，Kioxia 股價出現大幅上漲。"
+    ],
+    "url": "https://technews.tw/2026/09/04/nand-flash-demand-unprecedented-kioxia-shares-soar/"
+  },
+  {
+    "title": "iOS 27 傳推出新功能讓兩支 iPhone 可共用門號，美／德或先上架",
+    "summary": [
+      "傳聞 iOS 27 將加入「iPhone Handoff」功能，允許兩支 iPhone 共用同一門號。",
+      "使用者可在兩部手機間無縫切換通話與訊息。",
+      "預計先在美國與德國市場上架。"
+    ],
+    "url": "https://technews.tw/2026/09/04/apple-just-made-using-two-iphones-with-one-number-much-easier/"
+  },
+  {
+    "title": "調查發現 76% 工程師更愛 Claude Code 勝過 Codex，關鍵差異是什麼？",
+    "summary": [
+      "在 138 位受訪工程師中，76% 表示日常開發工作使用 Anthropic Claude Code。",
+      "相較之下，只有 35% 使用 OpenAI Codex，另有 22% 同時使用兩者。",
+      "調查指出 Claude Code 在程式碼生成品質、使用者體驗與工具整合度上被認為優於 Codex。"
+    ],
+    "url": "https://techorange.com/2026/09/04/claude-code-openai-codex-ai-developers/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss"
+  },
+  {
+    "title": "快速消費品巨頭如何迎戰供應鏈波動？金百利克拉克的數位分身與資料湖策略",
+    "summary": [
+      "導入 ProvisionAi 的 Earl 系統作為供應鏈「數位分身」，透過機器學習與最佳化演算法將貨運波動降低約 60%，並自動完成 80% 的出貨排程。",
+      "每年為公司節省數百萬美元成本，同時減少碳排放，提高物流效率與韌性。",
+      "建立集中式資料湖，串聯全公司資料，支援預測性維護與智慧工廠的 AI 應用，提升整體營運效能。"
+    ],
+    "url": "https://techorange.com/2026/09/04/kimberly-clark-ai-digital-twins/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss"
+  }
+]

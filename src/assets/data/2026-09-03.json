@@ -1,0 +1,200 @@
+[
+  {
+    "title": "Builders 舞台為 TechCrunch Disrupt 2026 帶來實用的初創企業擴張策略",
+    "summary": [
+      "Builders 舞台重返 TechCrunch Disrupt，聚焦創辦人、營運者與投資人。",
+      "討論從零到規模的實務經驗與挑戰。",
+      "提供可直接套用的成長與資金策略。"
+    ],
+    "url": "https://techcrunch.com/2026/09/02/the-builders-stage-brings-practical-strategies-for-scaling-startups-to-techcrunch-disrupt-2026/"
+  },
+  {
+    "title": "Palo Alto Networks 以5億美元收購 Thrive 支持的 Console",
+    "summary": [
+      "Palo Alto Networks 以5億美元完成對 Console 的收購。",
+      "此舉加強其在 AI IT 服務自動化領域的佈局。",
+      "Sequoia 支持的 Serval 成為該領域的事實領導者。"
+    ],
+    "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/"
+  },
+  {
+    "title": "以簡化方式在大規模實現 AI 整合",
+    "summary": [
+      "隨著企業規模擴大，技術基礎設施容易變成負擔。",
+      "Jabil 透過統一平台降低資料孤島與手動流程。",
+      "簡化的 AI 整合能提升問題偵測與決策效率。"
+    ],
+    "url": "https://www.technologyreview.com/2026/09/02/1142879/facilitating-ai-integration-with-simplicity-at-scale/"
+  },
+  {
+    "title": "The Download：AI 謎題與通往最近恆星系統的路徑",
+    "summary": [
+      "每日科技快訊聚焦 AI 最新動態與測試。",
+      "探討 AI 在智力測驗與遊戲中的表現缺陷。",
+      "介紹前往阿爾法星系的概念性任務與相關技術挑戰。"
+    ],
+    "url": "https://www.technologyreview.com/2026/09/02/1143283/the-download-ai-puzzles-alpha-centauri-mission/"
+  },
+  {
+    "title": "Google 宣稱新 Gemini 3.8 Flash 模型「更努力」但成本或升高",
+    "summary": [
+      "Gemini 3.8 Flash 在複雜任務上增加推理步驟與工具迭代呼叫。",
+      "定價與前代相同：每百萬輸入代幣 0.75 美元，輸出 3.75 美元。",
+      "預期在效能提升的同時，使用成本可能上升。"
+    ],
+    "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash"
+  },
+  {
+    "title": "Amazon AI 助手可辨識假冒公司郵件",
+    "summary": [
+      "新功能讓 Alexa 以 AI 判斷收到的電子郵件、簡訊或電話是否真的是 Amazon 發送。",
+      "使用者可直接詢問 Alexa for Shopping，系統會比對訊息內容與官方資訊。",
+      "此舉旨在減少冒充詐騙，提升使用者對 Amazon 通訊的信任度。"
+    ],
+    "url": "https://www.theverge.com/tech/988518/amazon-alexa-for-shopping-verify-emails"
+  },
+  {
+    "title": "預算協議附贈福利：暫停政治干預科研補助金",
+    "summary": [
+      "美國國會暫緩 OMB 重寫科研資金分配的計畫。",
+      "此舉將政治對科研補助金的控制延後至 12 月，避免短期政治因素影響長期研究。",
+      "議員認為此舉有助於維護科研獨立性與資金分配透明度。"
+    ],
+    "url": "https://arstechnica.com/science/2026/09/budget-deal-puts-political-control-of-grants-on-hold-until-december/"
+  },
+  {
+    "title": "我的駕照在數小時內被販售：FBI 調查大型資料外洩",
+    "summary": [
+      "超過 1.53 億筆個人資料，包括駕照資訊，正於暗網新平台上販售。",
+      "FBI 已介入調查，此次外洩被形容為「即時」且規模龐大。",
+      "受害者被建議監控信用報告並更換相關帳號密碼，以降低身份盜用風險。"
+    ],
+    "url": "https://arstechnica.com/security/2026/09/my-drivers-license-is-one-of-153-million-for-sale-on-a-new-dark-website/"
+  },
+  {
+    "title": "Meta 推出新 AI 代理人 Hatch，放寬員工使用限制",
+    "summary": [
+      "Meta 鼓勵員工試用其最新 AI 專案 Hatch，提升工作效率。",
+      "同時公司減少對員工「tokenmaxxing」的壓力，允許更彈性的 AI 使用方式。",
+      "此舉顯示 Meta 正在內部推動 AI 文化，同時避免過度量化使用指標。"
+    ],
+    "url": "https://www.wired.com/story/meta-pushes-its-new-ai-agent-on-employees-but-eases-off-on-tokenmaxxing/"
+  },
+  {
+    "title": "特朗普政府在《紐約時報》版權訴訟中站在 OpenAI 旁",
+    "summary": [
+      "美國政府以信件形式支持 OpenAI，主張以他人智慧財產訓練 AI 屬於合理使用。",
+      "此立場可能為 AI 產業在版權爭議中提供重要法律先例。",
+      "訴訟焦點在於 AI 模型是否可在未取得授權的情況下使用大量受版權保護的內容。"
+    ],
+    "url": "https://www.wired.com/story/trump-administration-sides-with-ai-giants-new-york-times-lawsuit/"
+  },
+  {
+    "title": "Muse Spark 1.3 版本發布",
+    "summary": [
+      "Meta 推出新一代生成式 AI 模型 Muse Spark 1.3。",
+      "模型針對文字與影像生成進行效能與品質提升。",
+      "開發者可透過官方鏈結取得模型說明與使用方式。"
+    ],
+    "url": "https://developer.meta.com/ai/models/muse-spark/"
+  },
+  {
+    "title": "Gemini 3.8 Flash 與 3.8 Flash Cyber",
+    "summary": [
+      "Google 公布 Gemini 3.8 Flash 系列，強調高速推理能力。",
+      "Flash Cyber 版本加入額外的安全與網路防護特性。",
+      "完整技術細節與使用案例可在官方部落格查閱。"
+    ],
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+  },
+  {
+    "title": "HyperWorld：超圖結構化狀態序列化提升文本世界模型",
+    "summary": [
+      "研究不同序列化方式對文本世界模型的影響，提出 HyperWorld 框架。",
+      "比較原始觀測、獨立句子、二元三元組與以實體為中心的超邊四種序列化方法。",
+      "實驗顯示實體中心超邊在預測環境動態與規劃效果上優於其他方式。"
+    ],
+    "url": "https://arxiv.org/abs/2609.00002"
+  },
+  {
+    "title": "I-CARE：可控多樣化文本到圖像模型的干擾現象分析",
+    "summary": [
+      "提出 I-CARE 方法，將干擾 (interference) 正式化為可測量的研究對象。",
+      "提供任務定義、評估指標與結果報告模板，促進生成式模型遺忘研究的可重現性。",
+      "旨在系統性評估在文本到圖像模型中，解除知識時對相關概念的意外衰退。"
+    ],
+    "url": "https://arxiv.org/abs/2609.00003"
+  },
+  {
+    "title": "IBM 時序模型在 Confluent 上的即時智慧應用",
+    "summary": [
+      "IBM 示範將時序預測模型部署於 Confluent 平台，實現資料流的即時分析。",
+      "結合 Kafka 流處理與機器學習模型，提供低延遲的預測與異常偵測服務。",
+      "案例說明此架構在企業環境中提升決策速度與運營效率的具體效益。"
+    ],
+    "url": "https://huggingface.co/blog/ibm-research/real-time-intelligence"
+  },
+  {
+    "title": "BenchMIRT：大型語言模型基準測試實際在測量什麼？",
+    "summary": [
+      "BenchMIRT 針對現有 LLM 基準測試進行系統性分析，揭示它們多聚焦於表面指標而非真實能力。",
+      "研究指出，多數基準測試受資料分布、提示設計與評分方式影響，可能高估模型的推理與常識能力。",
+      "作者提供了新的評估框架，建議結合多樣化任務與更嚴謹的測試設計，以獲得更可靠的模型表現衡量。"
+    ],
+    "url": "https://huggingface.co/blog/allenai/benchmirt"
+  },
+  {
+    "title": "Sangoma Switchvox重大SQL注入漏洞遭利用",
+    "summary": [
+      "Horizon3.ai 於 2024 年 4 月向 Sangoma 通報 12 項 Switchvox 平台弱點，其中 CVE-2026-9586 為最嚴重。",
+      "該漏洞允許攻擊者透過未驗證的 SQL 注入遠端執行任意程式碼，危害整個電話管理系統。",
+      "依 CVSS v4.0 評分，此漏洞屬於高危等級，使用者需盡速更新補丁並加強存取控制。"
+    ],
+    "url": "https://www.ithome.com.tw/news/178652"
+  },
+  {
+    "title": "Proofpoint擬併購資料安全業者Varonis",
+    "summary": [
+      "Proofpoint 正在與資料安全公司 Varonis 進行併購談判，預計完成後將擴大其資料保護版圖。",
+      "Varonis 目前市值約 50 億美元，為私募股權公司 Thoma Bravo 所持有的資安子公司。",
+      "此交易若成行，將加強 Proofpoint 在雲端與本地資料安全解決方案的市場競爭力。"
+    ],
+    "url": "https://www.ithome.com.tw/news/178651"
+  },
+  {
+    "title": "中東加快管道建設，美國：兩年後「荷莫茲海峽」將毫無價值",
+    "summary": [
+      "受地緣政治與能源安全考量，中東多國正加速建設跨境油氣管道，以降低對海上運輸的依賴。",
+      "美國財政部長貝森特指出，隨著管道網絡完成，荷莫茲海峽在未來兩年內可能失去戰略價值。",
+      "此趨勢將重塑全球石油運輸格局，並影響相關投資與國際能源政策。"
+    ],
+    "url": "https://technews.tw/2026/09/03/middle-eastern-nations-race-to-build-oil-pipelines-us-the-strait-of-hormuz-will-be-worthless-in-two-years/"
+  },
+  {
+    "title": "華立預期關鍵材料最高調漲 20%，海外市場布局因應在地化需求",
+    "summary": [
+      "華立預測 2026 年半導體關鍵材料平均漲幅 10%，最高可達 20%，主要受原物料、人力與物流成本上升影響。",
+      "公司將加強海外佈局，提供在地化供應以降低客戶的採購與運輸成本。",
+      "此舉旨在維持競爭力，同時因應全球半導體產業供應鏈的持續緊張。"
+    ],
+    "url": "https://finance.technews.tw/2026/09/03/huali-expects-key-material-prices-to-rise-by-up-to-20/"
+  },
+  {
+    "title": "物理 AI 最大商機或許不在人形機器人，而是替既有設備裝上大腦",
+    "summary": [
+      "Physical AI 的核心價值在於為現有設備（如工廠輸送帶、風力發電機、冷卻系統等）加裝能理解環境、做出判斷的「大腦」，而非僅靠新的人形機器人。",
+      "這些設備已產生大量感測資料，但缺乏將資料轉譯為可被決策系統使用的智慧層，AI 可填補此缺口，提高設備利用率。",
+      "相較於等待新機器人大規模落地，將 AI 套用於既有硬體的方式更新速度更快，能更快實現商業化。"
+    ],
+    "url": "https://techorange.com/2026/09/03/physical-ai-opportunity/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss"
+  },
+  {
+    "title": "跨境金流跟不上供應鏈成長速度，亞洲金融科技聯盟主席蔡玉玲：臺灣穩定幣應從最強的 B2B 場景切入",
+    "summary": [
+      "臺灣供應鏈成長迅速，傳統金融結算速度落後；穩定幣可提供全年無休、即時結算，降低交易與時間成本。",
+      "建議將穩定幣應用於高信任度的 B2B 供應鏈場景，避免 B2C 市場的詐騙風險，打造安全且具規模效應的示範。",
+      "亞洲金融科技聯盟正協調 16 個亞太國家的法規與技術標準，並透過 AFA Awards 推動具實際跨境實績的企業快速進入其他成員國市場。"
+    ],
+    "url": "https://techorange.com/2026/09/03/fintechon-2026-afa-summit-jaclyntsai/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss"
+  }
+]
