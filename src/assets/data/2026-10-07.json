@@ -1,0 +1,38 @@
+[
+  {
+    "title": "前 Ramp 工程師創辦 Melius 獲 2,000 萬美元融資，轉向生成式創意資產平台",
+    "summary": [
+      "Melius 由前 Ramp 工程師創立，在放棄首個產品後獲得 2,000 萬美元融資。",
+      "公司戰略從協助行銷人員管理廣告支出，轉向開發生成創意資產與活動的工具。",
+      "新平台旨在利用 AI 技術自動化內容創作流程，以滿足市場對高品質廣告素材的需求。"
+    ],
+    "url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/"
+  },
+  {
+    "title": "Musubi 推出 PolicyLM-1.7B，以輕量級 AI 模型革新即時內容審核",
+    "summary": [
+      "Musubi 發布名為 PolicyLM-1.7B 的輕量級決策模型，專為即時內容審核設計。",
+      "該模型採用開放權重（open weights）方式發布，允許開發者自由使用與調整。",
+      "此舉旨在透過高效能的 AI 決策模型，提升平台在處理大量用戶內容時的審核效率與準確性。"
+    ],
+    "url": "https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/"
+  },
+  {
+    "title": "Apache HTTP Server 發布 2.4.69 版，修補 20 個資安漏洞含 3 個重大風險",
+    "summary": [
+      "Apache 軟體基金會發布 HTTP Server 2.4.69 版本，修補了 20 個資安漏洞。",
+      "漏洞涵蓋記憶體破壞、資訊洩漏、阻斷服務及權限管理等問題，影響 2.4.0 至 2.4.68 版本。",
+      "官方建議用戶立即升級至 2.4.69 版，以消除包含 3 個重大漏洞在內的安全風險。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179473"
+  },
+  {
+    "title": "OpenAI 公開 722 篇數學研究手稿，展示內部前沿模型解決 4,000 道難題成果",
+    "summary": [
+      "OpenAI 於 10 月 6 日公布由內部前沿模型產生的大量數學研究成果。",
+      "公司在 GitHub 上公開了 722 篇研究手稿，展示模型在解決 4,000 道數學問題上的能力。",
+      "OpenAI 尚未公開該前沿模型本身，目前正研究如何以負責任的方式進行釋出。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179471"
+  }
+]
