@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nous Research 確認估值達 15 億美元，推出企業級 AI 代理",
+    "summary": [
+      "Nous Research 確認其估值已達到 15 億美元。",
+      "該公司完成了 9,000 萬美元的 B 輪融資。",
+      "正式推出專為商業用戶設計的 AI 代理產品。"
+    ],
+    "url": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/"
+  },
+  {
+    "title": "微軟發布搭載 Nvidia 晶片的新款 AI PC 與升級版 Windows 11",
+    "summary": [
+      "微軟公布了 Surface Laptop Ultra 的規格與價格。",
+      "新款 AI PC 搭載 Nvidia 晶片，專為運行 AI 模型與代理而設計。",
+      "這些設備將搭載經過重新設計的 Windows 11 系統。"
+    ],
+    "url": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/"
+  },
+  {
+    "title": "上福公告子公司 Katun Corporation 發生資安事故",
+    "summary": [
+      "上福（6128）旗下子公司 Katun Corporation 發生資安事故，部分系統出現異常存取行為。",
+      "公司已將受影響設備隔離，並進行權限控管與系統檢查。",
+      "目前正持續監控事件發展並調查影響範圍。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179510"
+  },
+  {
+    "title": "杏一網站疑似發生個資外洩事件",
+    "summary": [
+      "杏一（4175）接獲消費者反映，委外廠商管理的網站疑似遭第三方不當取得資料。",
+      "公司已啟動資安事件應變機制，責成維護廠商進行調查。",
+      "透過網站與 App 加強對消費者的反詐騙宣導。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179507"
+  }
+]
