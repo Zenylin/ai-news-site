@@ -1,0 +1,38 @@
+[
+  {
+    "title": "工程師打造互動網站，模擬翻閱 Elizabeth Holmes 辦公桌檔案",
+    "summary": [
+      "Extend 工程師 Bo Lau 利用美國 v. Elizabeth Holmes 審判中的超過一千封郵件、簡報及文件，建立了一個互動式網站。",
+      "該網站模擬了翻閱 Theranos 創辦人 Elizabeth Holmes 辦公桌的體驗，呈現高度詳細的檔案內容。",
+      "此專案讓公眾能以視覺化方式回顧審判關鍵證據與文件細節。"
+    ],
+    "url": "https://techcrunch.com/2026/10/08/pretend-youre-sitting-at-elizabeth-holmes-desk-on-this-weirdly-detailed-website/"
+  },
+  {
+    "title": "OpenAI 被解僱安全研究員公開信反駁不當行為指控，警告寒蟬效應",
+    "summary": [
+      "三名被 OpenAI 解僱的安全研究員透過公開信，否認公司指控其不當處理敏感資訊的說法。",
+      "研究員警告，這些解僱決定正在對公司的 AI 安全文化產生寒蟬效應，抑制內部對安全問題的討論。",
+      "此事件引發外界對 OpenAI 內部安全治理及人才保留策略的關注。"
+    ],
+    "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/"
+  },
+  {
+    "title": "生成式 AI 擴大攻擊面，卡巴斯基強調威脅情報需具備可執行性",
+    "summary": [
+      "生成式 AI 降低了網路攻擊門檻，使攻擊者能更快、更大量地進行偵察與釣魚，同時企業導入 AI 工具也擴大了供應鏈風險。",
+      "卡巴斯基臺灣技術總監謝長軒指出，防禦關鍵不在於擁有最多預警訊號，而在於將海量資料轉化為可立即行動的情報。",
+      "有效的威脅情報需具備來源可信、時間有效、脈絡相關、信心度清楚與可執行等條件，需結合 AI 處理與專家判斷。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179529"
+  },
+  {
+    "title": "HPE 預告第 13 代伺服器平台，主打三大系統安全性強化",
+    "summary": [
+      "HPE 預告將推出第 13 代伺服器平台，重點強化三大系統安全性特色。",
+      "新平台將搭配 AMD 代號為 Venice 的第六代 EPYC 處理器（EPYC 9006 SP7 系列）。",
+      "AMD 預計於 11 月正式推出首批產品，多家伺服器廠商已陸續發表相關新一代機型。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179547"
+  }
+]
