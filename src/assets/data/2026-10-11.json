@@ -1,0 +1,38 @@
+[
+  {
+    "title": "微軟執行長 Nadella 呼籲為 AI 模型設置「緊急煞車」機制",
+    "summary": [
+      "微軟執行長 Satya Nadella 發文指出，現在是時候重新評估 AI 的「信任架構」。",
+      "他強調 AI 模型需要具備類似「緊急煞車」的功能，以應對潛在風險。",
+      "此言論反映了科技巨頭對 AI 安全與可控性的最新關注焦點。"
+    ],
+    "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/"
+  },
+  {
+    "title": "Apple 收購個人化播客新創 Huxe 團隊並授權技術",
+    "summary": [
+      "Apple 披露與個人化播客新創公司 Huxe 達成交易，將聘請其團隊並授權相關技術。",
+      "市場分析認為，此舉可能顯示 Apple 有意進入 AI 生成播客領域。",
+      "透過整合 Huxe 的技術，Apple 有望強化其在個人化內容推薦方面的能力。"
+    ],
+    "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/"
+  },
+  {
+    "title": "專家建議四大治理方向，協助企業防止 AI 代理「做錯事」",
+    "summary": [
+      "代理式 AI（Agentic AI）快速進入企業運作，但自主行動能力也帶來新的資安破口。",
+      "企業面臨 AI 代理權限管理、內部資產可見度以及錯誤執行應對等挑戰。",
+      "專家提出四大治理方向，旨在幫助企業在享受效率紅利的同時，有效管控 AI 代理的風險。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179532"
+  },
+  {
+    "title": "美國亞利桑那州最高法院系統遭釣魚攻擊，逾百萬人個資外洩",
+    "summary": [
+      "美國亞利桑那州最高法院內部系統上週遭到網路釣魚攻擊。",
+      "駭客成功竊取法院資料，導致將近 130 萬人的個人資訊外洩。",
+      "此事件凸顯了政府司法系統在面對社會工程攻擊時的脆弱性。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179559"
+  }
+]
