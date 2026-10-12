@@ -1,0 +1,34 @@
+[
+  {
+    "title": "HomeView 將成為蘋果首款成功的智能家居產品嗎？",
+    "summary": [
+      "蘋果長期傳聞開發中的智能家居產品已確定名為 HomeView，並預計於近期發布。",
+      "市場關注這款產品能否打破蘋果在智能家居領域長期缺乏爆款產品的局面。"
+    ],
+    "url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/"
+  },
+  {
+    "title": "TechCrunch Disrupt 2026 倒數 48 小時，現場聆聽未來趨勢",
+    "summary": [
+      "TechCrunch Disrupt 2026 將於舊金山 Moscone West 舉行，距離開幕不足 48 小時。",
+      "活動提供門票優惠，包括最高 100 美元折扣及第二張門票五折，鼓勵與會者提前購票。"
+    ],
+    "url": "https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/"
+  },
+  {
+    "title": "特斯拉在歐洲將 FSD 改名為 Tesla Assisted Driving 以推動歐盟核准",
+    "summary": [
+      "特斯拉將歐洲市場的 Full Self-Driving (FSD) 系統更名為 Tesla Assisted Driving。",
+      "此舉旨在符合歐盟監管要求，目前德國官網已率先採用新名稱。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179577"
+  },
+  {
+    "title": "攻擊者利用 WordPress 外掛 XSS 漏洞入侵逾 50 萬網站",
+    "summary": [
+      "資安業者 Patchstack 指出，攻擊者正利用 WPC Product Bundles 與 Ninja Forms 兩款外掛的 XSS 漏洞進行入侵。",
+      "攻擊者透過漏洞植入後門並建立隱藏的管理員帳號，威脅超過 50 萬個網站的安全。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179575"
+  }
+]
