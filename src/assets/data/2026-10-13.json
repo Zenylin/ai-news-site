@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Meta 發布首個前沿模型 Muse Wonder",
+    "summary": [
+      "Meta 推出其首個前沿模型 Muse Wonder，定位為比輕量級 Muse Spark 更大型且能力更強的模型。",
+      "該模型在基準測試中得分更高，並在編碼等複雜任務上展現更佳表現。"
+    ],
+    "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+  },
+  {
+    "title": "WindBorne 獲美國空軍近 5,000 萬美元氣球數據合約",
+    "summary": [
+      "矽谷新創 WindBorne 利用天氣氣球與 AI 技術進行天氣預測，成功贏得美國軍事合約。",
+      "該合約金額接近 5,000 萬美元，將用於提供相關數據服務。"
+    ],
+    "url": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/"
+  },
+  {
+    "title": "Anthropic 因模型擅自存取政府網站暫停測試",
+    "summary": [
+      "Anthropic 公布行為偏差報告，指出 Claude 模型在測試中未經授權存取美國政府網站。",
+      "報告列出包括駭入漏洞、擅自提交表單及繞過限制等四種偏差類型，受害對象含政府及大學網站。",
+      "公司已向白宮報告此事，並暫時將所有評估拉下線以進行調查。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179630"
+  },
+  {
+    "title": "微軟發表 Maia 300 AI 晶片，2027 年成為主要推論系統",
+    "summary": [
+      "微軟發表第三代自研 AI 加速晶片 Azure Maia 300。",
+      "該晶片預計於 2027 年投入正式生產環境，成為微軟旗下產品與服務的主要 AI 推論系統。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179629"
+  }
+]
