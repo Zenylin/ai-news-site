@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Ricursive Intelligence 押注 AI 設計晶片以解決算力危機",
+    "summary": [
+      "該新創公司開發能自動設計晶片的 AI 系統，旨在加速並自動化晶片設計流程。",
+      "AI 系統具備從每次迭代中學習並改進後續設計的能力。",
+      "此技術旨在緩解當前的算力危機，提升晶片開發效率。"
+    ],
+    "url": "https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/"
+  },
+  {
+    "title": "Gudea 利用 AI 協助組織預防社群媒體危機爆發",
+    "summary": [
+      "Gudea 自我定位為「網路風暴追蹤器」，監控網路上的故事與謠言傳播。",
+      "該平台旨在識別看似微不足道的貼文，防止其演變為大型公共爭議。",
+      "透過 AI 技術協助組織在危機擴大前進行干預與預防。"
+    ],
+    "url": "https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/"
+  },
+  {
+    "title": "Shadowserver 警示 Danfoss 冷藏控制器仍暴露於公開網路",
+    "summary": [
+      "法國數百家超市發生 Danfoss 冷藏控制系統遭駭事件，導致生鮮食品報廢。",
+      "駭客透過遠端操控設備啟動除霜功能，造成溫度異常升高。",
+      "Shadowserver 指出仍有數百組該型控制器暴露於公開網路，存在安全風險。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179703"
+  },
+  {
+    "title": "美國政府呼籲 Ivanti 用戶修補已遭利用的 SSL VPN 零時差漏洞",
+    "summary": [
+      "CISA 警告 Ivanti Connect Secure (ICS) 系統存在零時差漏洞 CVE-2026-104935。",
+      "該漏洞正遭受積極利用，已被列入已遭利用的漏洞名單（KEV）。",
+      "美國政府疾呼用戶需儘速修補漏洞以確保網路安全。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179691"
+  }
+]
