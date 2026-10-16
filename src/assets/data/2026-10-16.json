@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Cal AI 憑藉網紅行銷策略兩年營收破 3,000 萬美元，獲 MyFitnessPal 收購",
+    "summary": [
+      "Cal AI 在兩年內透過大量網紅行銷策略，成功實現病毒式傳播並產生超過 3,000 萬美元營收。",
+      "該公司於今年 3 月被健康應用 MyFitnessPal 以未披露的金額收購。",
+      "此案例顯示了小型團隊利用影響者經濟在競爭激烈的 AI 健康市場中取得突破的有效性。"
+    ],
+    "url": "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/"
+  },
+  {
+    "title": "Meta 與 Apple 合作推出可在 Mac 本地運行的開放權重 AI 模型 Muse Spark Open",
+    "summary": [
+      "Meta 與 Apple 攜手合作，推出最新的開放權重 AI 模型 Muse Spark Open。",
+      "該模型專為 Apple Silicon 設計，能夠直接在 Mac 電腦上進行本地化運行。",
+      "此舉標誌著大型科技公司在端側 AI（On-device AI）領域的合作與技術落地。"
+    ],
+    "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/"
+  },
+  {
+    "title": "英國法律援助署資料外洩事件曝光，受影響紀錄最早可追溯至 50 年前",
+    "summary": [
+      "英國司法部轄下的法律援助署（LAA）確認，去年 4 月的資安事件導致大量民眾及部分受刑者資料外洩。",
+      "外洩資料的時間跨度極長，最久遠的紀錄可追溯至近 50 年前。",
+      "LAA 於 2025 年 4 月偵測到網路攻擊，並在同年 5 月發現攻擊範圍擴大，本月正式公布外洩規模與類型。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179736"
+  },
+  {
+    "title": "H&M 與 TFG London 等服飾業者傳出遭網路攻擊導致資料外洩",
+    "summary": [
+      "瑞典服飾巨頭 H&M 及英國服裝業者 TFG London 近日傳出遭受網路攻擊。",
+      "攻擊事件導致相關資料外洩，多家服飾品牌業者均受到影響。",
+      "涉事業者目前已投入資源進行內部調查以評估損失與原因。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179735"
+  }
+]
