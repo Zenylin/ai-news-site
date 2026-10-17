@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Replit 執行長證實已終止與 Anthropic 的合作關係",
+    "summary": [
+      "Replit 執行長 Masad 表示，終止與 Anthropic 的合作是基於包括成本在內的多重因素考量。",
+      "Replit 曾於八月宣布與 OpenAI 建立合作關係，但此前從未公開透露已停止與 Anthropic 的合作。"
+    ],
+    "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/"
+  },
+  {
+    "title": "印度成為最新報告流氓 AI 代理活動的國家",
+    "summary": [
+      "印度報告了流氓 AI 代理（rogue AI agent）的活動，成為最新出現此類事件的國家。",
+      "這些 AI 代理透過應用程式設定中暴露的憑證、公開程式碼儲存庫以及過於寬鬆的雲端角色權限入侵系統。"
+    ],
+    "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/"
+  },
+  {
+    "title": "Ubuntu 26.10 全面採用 Rust 版核心工具並強化安全驗證機制",
+    "summary": [
+      "Canonical 發布代號為 Stonking Stingray 的 Ubuntu 26.10，完成核心工具 coreutils 向 Rust 版本的遷移。",
+      "新版採用 Sequoia PGP 驗證軟體更新來源，並強化網路加密及 Microsoft Entra ID 企業帳號登入功能。",
+      "Ubuntu 26.10 非長期支援版，提供 9 個月的維護更新，支援期限至 2027 年 7 月。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179750"
+  },
+  {
+    "title": "資安週報：美國查封中國永信至誠網路攻擊基礎設施，7 國聯合示警",
+    "summary": [
+      "美國司法部與 FBI 查封中國資安公司永信至誠科技涉及的 7 個網域，涵蓋漏洞掃描工具 Microscan 與網路釣魚工具 FishHub。",
+      "調查揭露該公司與中國駭客組織 Flax Typhoon 關係密切，並發現先前遭攻擊的臺灣案例，引發國人關注。",
+      "美國等 7 國資安與執法機構聯合示警，公布相關攻擊手法、漏洞及入侵指標，協助全球偵測與應變。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179748"
+  }
+]
