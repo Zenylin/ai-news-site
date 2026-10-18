@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Meta 移除引發爬蟲與 AI 訓練爭議的條款",
+    "summary": [
+      "Meta 更新了其服務條款，移除了先前引發外界對網頁爬蟲及 AI 訓練數據使用疑慮的相關語言。",
+      "Meta 發言人強調，此次條款更新並未改變 Meta 進行網頁爬蟲的實際運作方式。"
+    ],
+    "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/"
+  },
+  {
+    "title": "Anthropic 指出其員工結構趨向資深化，會議時間增加",
+    "summary": [
+      "Anthropic 透露過去一年間，其員工組成結構發生顯著變化，初級員工比例下降，團隊整體趨向資深化。",
+      "公司內部的工作型態也有所轉變，員工花費在會議上的時間明顯增加。"
+    ],
+    "url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/"
+  },
+  {
+    "title": "Ubuntu 26.10 全面採用 Rust 核心工具，強化安全驗證與企業登入",
+    "summary": [
+      "Canonical 發布代號為 Stonking Stingray 的 Ubuntu 26.10，完成核心工具 coreutils 向 Rust 語言的遷移。",
+      "新版採用 Sequoia PGP 技術驗證軟體更新來源，並強化網路加密功能及 Microsoft Entra ID 企業帳號登入支援。",
+      "Ubuntu 26.10 非長期支援版（LTS），提供 9 個月的維護更新，支援期限至 2027 年 7 月。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179750"
+  },
+  {
+    "title": "資安週報：美國查封中國永信至誠網路攻擊基礎設施，7 國聯合示警",
+    "summary": [
+      "美國司法部與 FBI 查封中國資安公司永信至誠科技涉及的 7 個網域，包括漏洞掃描工具 Microscan 與釣魚工具 FishHub。",
+      "調查揭露該公司與中國駭客組織 Flax Typhoon 關係密切，並發現先前遭攻擊的臺灣案例，引發國內關注。",
+      "美國等 7 國資安與執法機構聯合發布警示，公布相關攻擊手法、漏洞及入侵指標，協助全球偵測與應變。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179748"
+  }
+]
