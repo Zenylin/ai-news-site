@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Anthropic 承諾將 5% 股份投入「公共利益基金」",
+    "summary": [
+      "Anthropic 宣布將把公司 5% 的股份承諾給一個名為「公共利益基金」的實體。",
+      "此舉旨在確保公司發展成果能回饋社會公共利益。"
+    ],
+    "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/"
+  },
+  {
+    "title": "迪士尼同意聘雇 Character.AI 絕大多數員工",
+    "summary": [
+      "迪士尼已同意聘雇 Character.AI 的絕大多數員工，且大部分獲聘員工已接受offer。",
+      "此交易目前為「追隨者標案」（stalking horse bid），其他公司仍可能提出更高報價。"
+    ],
+    "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/"
+  },
+  {
+    "title": "日本漢堡王 CRM 系統遭駭，逾 1,100 萬會員個資外洩",
+    "summary": [
+      "日本漢堡王官方 App 會員資訊管理系統遭未授權存取，導致超過 1,100 萬會員資料外洩。",
+      "攻擊者於 10 月 2 日至 7 日間竊取資訊，公司於 10 月 13 日發現並立即切斷連線。",
+      "目前正與外部資安廠商調查攻擊者如何成功駭入系統。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179766"
+  },
+  {
+    "title": "OpenBSD 修補潛藏 37 年的記憶體漏洞，攻擊程式已公開",
+    "summary": [
+      "資安業者 Calif 揭露 OpenBSD 存在可串連利用的核心漏洞，最早可追溯至 1988 年，潛藏長達 37 年。",
+      "研究人員已公開取得 root 權限的攻擊程式。",
+      "此前 Anthropic 的 AI 模型 Claude Mythos Preview 曾於該系統發現隱藏 27 年的遠端當機漏洞。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179765"
+  }
+]
