@@ -1,0 +1,38 @@
+[
+  {
+    "title": "紐約市長馬姆達尼：聯邦政府放棄AI監管，籲市民反抗AI接管敘事",
+    "summary": [
+      "紐約市長Zohran Mamdani批評聯邦政府在AI監管上失职，認為其未盡保護公眾的責任。",
+      "他呼籲紐約市民拒絕接受AI接管是必然趨勢的敘事，並要求制定保護公眾利益的法規。",
+      "馬姆達尼強調應將權力還給民眾，以抵禦AI技術帶來的潛在風險。"
+    ],
+    "url": "https://techcrunch.com/2026/10/19/mamdani-says-feds-have-abdicated-on-ai-urges-new-yorkers-to-push-back/"
+  },
+  {
+    "title": "傳Nscale與Anthropic洽談450億美元算力合作協議",
+    "summary": [
+      "據報導，Nscale與Anthropic正就一項價值450億美元的算力交易進行談判。",
+      "若交易成行，這將是Anthropic過去一年內簽署的最新一筆大型算力協議。",
+      "此舉顯示Anthropic持續擴大其基礎設施投資，以支持AI模型訓練與部署需求。"
+    ],
+    "url": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/"
+  },
+  {
+    "title": "韓國藥監會網站安全漏洞：ChatGPT可下載2000多筆臨床試驗資料",
+    "summary": [
+      "韓國食品藥物安全部（MFDS）轄下機構發現非公開臨床試驗資料可透過ChatGPT下載，已公開道歉並啟動調查。",
+      "漏洞導致超過2000筆臨床試驗資料外洩，涉及上千名受試者的個人隱私資訊。",
+      "此事件突顯了AI工具在存取政府監管數據時可能帶來的安全與隱私風險。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179801"
+  },
+  {
+    "title": "OVHcloud CLI工具遭供應鏈攻擊，多個版本被植入竊資惡意程式",
+    "summary": [
+      "OVHcloud創辦人揭露其命令列工具（CLI）遭受供應鏈攻擊，被植入可搜尋磁碟並竊取敏感資料的惡意程式。",
+      "初步調查顯示，0.11.0至0.15.0共5個版本受到影響，用戶需立即更新或採取防護措施。",
+      "該工具用於管理雲端服務及自動化部署，攻擊可能導致用戶基礎設施資訊外洩。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179797"
+  }
+]
