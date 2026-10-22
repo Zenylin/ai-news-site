@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Blackstone AI主管Khaira：對AI建設債務的擔憂被過度放大",
+    "summary": [
+      "Blackstone AI部門負責人Jas Khaira表示，市場對AI基礎設施建設債務的恐慌情緒被過度渲染。",
+      "該私募巨頭認為目前的市場波動並未對其業務構成威脅，因此無需感到恐慌。",
+      "Khaira強調公司對AI投資策略保持信心，認為當前風險可控。"
+    ],
+    "url": "https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/"
+  },
+  {
+    "title": "TechCrunch 2026創始人峰會：11月4日波士頓舉行",
+    "summary": [
+      "TechCrunch Founder Summit 2026將於11月4日在波士頓舉辦，為期一天的活動。",
+      "活動旨在讓不同階段的創始人與頂級風投及資深企業家建立聯繫。",
+      "與會者將獲得關於公司構建與規模化的戰術性見解。"
+    ],
+    "url": "https://techcrunch.com/2026/10/21/techcrunch-founder-summit-2026-everything-you-need-to-know/"
+  },
+  {
+    "title": "PHP發布緊急安全更新，修補嚴重漏洞PHP2Shell",
+    "summary": [
+      "PHP開發團隊於10月21日釋出8.5.12、8.4.27、8.3.36及8.2.35等多個版本的安全更新。",
+      "此次更新旨在修補兩個CVSS v4.0評分高達9.2分的重大漏洞，包括CVE-2026-109618。",
+      "該漏洞被稱為PHP2Shell，對全球PHP應用系統構成嚴重安全威脅。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179870"
+  },
+  {
+    "title": "微軟開源Scope評測平臺，追蹤AI程式開發代理表現",
+    "summary": [
+      "微軟開源了名為Scope的評測平臺，用於評估GitHub Copilot、Claude Code等AI程式開發代理。",
+      "該平臺可讓AI代理執行指定任務，並檢查其是否正確使用SDK、API及相關工具。",
+      "Scope會記錄操作過程與測試結果，協助開發團隊識別並解決代理執行任務時的問題。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179868"
+  }
+]
