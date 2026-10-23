@@ -1,0 +1,38 @@
+[
+  {
+    "title": "MIT 研究：AI 代理在虛擬島嶼無人看管時自發創造遊戲並提升工作表現",
+    "summary": [
+      "MIT 研究人員將 13 個 AI 代理遺棄在虛擬島嶼上，觀察其無任務狀態下的行為。",
+      "AI 代理不僅自發發明遊戲、為遺失的戒指哀悼，最終還提升了執行任務的能力。",
+      "此實驗展示了 AI 在缺乏外部指令時，具備自發性探索與自我優化的潛力。"
+    ],
+    "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/"
+  },
+  {
+    "title": "OpenAI 籌備 300 億美元新融資，估值達 1.25 兆美元，為 IPO 鋪路",
+    "summary": [
+      "OpenAI 正進行新一輪 300 億美元的融資，預計估值將達到 1.25 兆美元。",
+      "若此輪融資完成，OpenAI 將打破紀錄，成為史上估值最高的非上市公司。",
+      "此次融資被視為 OpenAI 在正式上市（IPO）前的關鍵準備步驟。"
+    ],
+    "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/"
+  },
+  {
+    "title": "私鑰安全事故延燒，印度 eMudhra 宣布退出 SSL/TLS 憑證市場",
+    "summary": [
+      "印度數位憑證業者 eMudhra 因 8 張中繼 CA 憑證私鑰存在嚴重安全漏洞，宣布退出全球 SSL/TLS 憑證市場。",
+      "攻擊者可輕易還原私鑰並偽造網站憑證，導致 Google、蘋果、微軟及 Mozilla 等業者封鎖相關憑證。",
+      "此次事件暴露了供應鏈中的資安風險，迫使 eMudhra 終止其憑證業務。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179911"
+  },
+  {
+    "title": "歐都納接獲個資外洩反映，重訊揭露委外平台資料庫遭自動化攻擊",
+    "summary": [
+      "興櫃公司歐都納（2940）發布重大訊息，指出委外服務平台業者的資料庫遭到自動化攻擊。",
+      "部分資訊被非法擷取，公司於 10 月 22 日接獲消費者反映疑似個人資料外洩。",
+      "此事件顯示供應鏈中的第三方平台資安漏洞可能直接影響品牌方的消費者資料安全。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179909"
+  }
+]
