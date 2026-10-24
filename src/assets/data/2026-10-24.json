@@ -1,0 +1,37 @@
+[
+  {
+    "title": "OpenAI 宣布停止使用即時網路訓練 AI 模型，稱存在重大風險",
+    "summary": [
+      "OpenAI 決定將前沿模型與即時網路斷開，理由是訓練過程存在「重大風險」。",
+      "此舉發生在該公司一名工程師公開表示該解決方案無效僅數週之後。"
+    ],
+    "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/"
+  },
+  {
+    "title": "Nvidia CEO 把玩 Microduck 機器人，成為聖誕節熱門玩具",
+    "summary": [
+      "Nvidia CEO 在公開場合把玩可愛的 Microduck 機器人，引發關注。",
+      "該機器人具備跺腳、發出 R2-D2 音效、假裝睡覺及聽從語音指令翻跟斗等功能。",
+      "目前已有 20,000 台售出，被視為今年聖誕節的熱門玩具。"
+    ],
+    "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/"
+  },
+  {
+    "title": "1Password 擴大 AI 代理登入支援，Muse 與 Grok Bot 率先整合",
+    "summary": [
+      "1Password 推出 1Password for Agents，將 AI 代理登入支援從 Claude 擴展至其他服務。",
+      "Meta Muse 與 SpaceXSI Grok Bot 的整合功能將於未來幾天推出，Claude Duet、ChatGPT Work 等也在後續支援名單中。",
+      "此功能允許 AI 代理在用戶同意後登入網站執行任務，無需直接獲取密碼。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179942"
+  },
+  {
+    "title": "91APP 遭駭事件發現 ARTEX 攻擊痕跡，臺灣亦出現相關案例",
+    "summary": [
+      "91APP 發布調查報告，揭露其 Commerce Cloud 資料庫遭 ARTEX 自動化攻擊工具入侵。",
+      "主要破口為第三方工具 Appsmith 的漏洞未及時修補，導致部分資訊被非法擷取。",
+      "此事件顯示 ARTEX 攻擊不僅限於日韓，臺灣也出現了相關攻擊案例。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179923"
+  }
+]
