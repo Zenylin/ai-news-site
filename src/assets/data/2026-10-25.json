@@ -1,0 +1,38 @@
+[
+  {
+    "title": "AI 殭屍地帶：未達預期或已關閉的 AI 專案與新創公司清單",
+    "summary": [
+      "文章彙整了包括 Apple Siri 延遲發布與 OpenAI 超級應用程式混亂上線在內的多個 AI 專案。",
+      "這些專案因技術瓶頸、市場反應不佳或內部問題而關閉或未能達到市場預期。",
+      "該清單持續更新，旨在記錄 AI 領域中失敗的案例以供業界參考。"
+    ],
+    "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/"
+  },
+  {
+    "title": "Block 推出新語音模型，聲音逼真且可本地運行",
+    "summary": [
+      "Block 公司發布了一款新的語音模型，其生成的聲音被形容為「詭異地擬人」。",
+      "該模型的一大亮點是能夠在 MacBook M4 Max 上進行本地運行，無需依賴雲端服務。",
+      "此舉顯示了端側 AI 在語音處理領域的技術進步與應用潛力。"
+    ],
+    "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/"
+  },
+  {
+    "title": "PHP 基金會警告：PHP2Shell 修補後仍存在未修補的 RCE 漏洞",
+    "summary": [
+      "在 PHP2Shell 漏洞（CVE-2026-109618 與 CVE-2026-109619）修補釋出兩天後，PHP 基金會發出新警告。",
+      "目前發現另一個遠端程式碼執行（RCE）漏洞 CVE-2026-115560 尚未修補，可能引發新一波資安風暴。",
+      "官方建議用戶暫時將 session.upload_progress 參數設為 false 作為緩解措施，直至正式修補程式發布。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179943"
+  },
+  {
+    "title": "1Password 擴大 AI 代理登入支援，整合 Muse 與 Grok Bot",
+    "summary": [
+      "1Password 推出「1Password for Agents」，將 AI 代理的登入支援範圍從 Claude 擴展至其他服務。",
+      "Meta Muse 與 SpaceXSI Grok Bot 的整合功能將於近期推出，Claude Duet、ChatGPT Work 等也列入後續支援名單。",
+      "此功能允許 AI 代理在用戶同意後安全登入網站執行任務，無需直接存取或儲存密碼。"
+    ],
+    "url": "https://www.ithome.com.tw/news/179942"
+  }
+]
