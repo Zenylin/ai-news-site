@@ -1,0 +1,37 @@
+[
+  {
+    "title": "微軟首次揭露 Azure 季度營收達 332 億美元",
+    "summary": [
+      "微軟罕見地首次公開 Azure 的具體季度營收數字，金額為 332 億美元。",
+      "此數據顯示 Azure 在雲端市場正迅速縮小與最大競爭對手 AWS 的差距。"
+    ],
+    "url": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/"
+  },
+  {
+    "title": "Google 全球擴展 AI 搜尋廣告以應對核心廣告增長放緩",
+    "summary": [
+      "Google 宣布在全球範圍內擴展其 AI 搜尋廣告服務。",
+      "此舉旨在應對傳統核心廣告業務增長速度放緩的問題。",
+      "母公司 Alphabet 第三季度營收年增 25%，達到 1,276 億美元。"
+    ],
+    "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/"
+  },
+  {
+    "title": "macOS 27.2 未修補 eMudhra 憑證風險，Git 與 curl 仍可能遭中間人攻擊",
+    "summary": [
+      "macOS 27.2 內建的 Git、curl 及 Python 3 等工具仍可能接受 eMudhra 已撤銷的問題憑證。",
+      "攻擊者可利用此漏洞進行中間人攻擊，冒充 GitHub 等網站誘使開發者下載遭竄改的程式碼。",
+      "Apple 已確認相關防護尚未完成，將透過後續更新修正此安全漏洞。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180061"
+  },
+  {
+    "title": "PHP2Shell 漏洞影響多家 IT 與 OT 廠商產品，相關公告陸續出爐",
+    "summary": [
+      "PHP2Shell 漏洞不僅影響全球約 7 成的網站伺服器，也波及採用 PHP 建置介面的工業環境系統。",
+      "該漏洞對部分 IT 與 OT 產品供應商造成重大影響，多家廠商已陸續發布相關安全公告。",
+      "由於影響範圍廣泛且嚴重，此漏洞被外界聯想到 4 年前爆發的 Log4Shell 漏洞風暴。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180047"
+  }
+]
