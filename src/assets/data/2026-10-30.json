@@ -1,0 +1,38 @@
+[
+  {
+    "title": "無需信仰神明即可申請職場AI使用宗教豁免",
+    "summary": [
+      "肯塔基大學行政人員David Durman成功獲得職場使用AI的宗教豁免權。",
+      "此案例顯示申請宗教豁免未必需要傳統意義上的神明信仰。",
+      "該事件引發關於職場AI使用政策與宗教自由邊界的討論。"
+    ],
+    "url": "https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/"
+  },
+  {
+    "title": "AWS執行長Jassy：將成為兆美元企業，但需先進行大規模支出",
+    "summary": [
+      "Amazon CEO Andy Jassy表示AWS目標成為首家營收達1兆美元的業務。",
+      "為爭奪AI雲端計算市場主導權，Amazon將持續進行高額資本支出。",
+      "公司戰略重點在於透過大規模投資鞏固其在AI基礎設施領域的優勢。"
+    ],
+    "url": "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/"
+  },
+  {
+    "title": "日本航空第三方訂位系統遭未授權存取，約9.2萬名旅客資料受影響",
+    "summary": [
+      "日本航空（JAL）與日本越洋航空（JTA）使用的第三方系統遭外部人士擅自存取。",
+      "約9.2萬名旅客的訂位代號、姓名及航班資訊外洩。",
+      "其中約2,000名旅客的護照號碼及電子郵件地址等敏感個資亦受影響。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180096"
+  },
+  {
+    "title": "年末購物旺季將至，Palo Alto Networks示警零售業面臨多重網路威脅",
+    "summary": [
+      "Palo Alto Networks發布報告，警告年底零售高峰期間網路攻擊風險升高。",
+      "攻擊者可能利用零售商忙於處理交易高峰及系統更新受限的時機發動攻擊。",
+      "零售業者與消費者需特別警惕此期間的資安漏洞與潛在威脅。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180095"
+  }
+]
