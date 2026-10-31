@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nvidia 考慮為 Nscale 西維吉尼亞 AI 資料中心貸款擔任共同擔保人",
+    "summary": [
+      "Nvidia 正考慮為 Nscale 在西維吉尼亞州的 AI 資料中心項目提供貸款共同擔保。",
+      "此舉旨在緩解投資者對 AI 基礎設施高額資本支出的擔憂。",
+      "透過晶片供應商介入財務結構，增強市場對 AI 投資回報的信心。"
+    ],
+    "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/"
+  },
+  {
+    "title": "注重隱私的 AI 助理 Ollie 宣布即將停止營運",
+    "summary": [
+      "以隱私保護為核心賣點的 AI 助理 Ollie 宣布將於一週後停止服務。",
+      "創始人指出，隨著市場上 AI 助理產品數量激增，競爭環境變得嚴峻。",
+      "此事件反映出專注於隱私利基市場的 AI 產品在商業持續性上面臨挑戰。"
+    ],
+    "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/"
+  },
+  {
+    "title": "GMI Cloud 展示桃園 AI Factory：電力取代空間成為資料中心新瓶頸",
+    "summary": [
+      "GMI Cloud 在桃園展示的 AI Factory 第一期區域留有大量空間，未如傳統機房般密集佈滿機櫃。",
+      "設計調整的原因並非算力需求不足，而是受到電力供應的限制。",
+      "AI 資料中心的擴充瓶頸正從傳統的空間利用率轉向電力基礎設施的承載能力。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180116"
+  },
+  {
+    "title": "群暉 NAS 遭 C3RB3R 勒索軟體攻擊，呼籲用戶更新 DSM 系統",
+    "summary": [
+      "群暉（Synology）於 10 月 29 日公告，旗下 NAS 設備近期遭受 C3RB3R 勒索軟體攻擊。",
+      "攻擊者利用的是 2024 年 12 月已修補的資安漏洞，顯示部分用戶未及時更新系統。",
+      "原廠強烈建議用戶盡速更新 DSM 系統，以確保設備安全並防止資料被加密勒索。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180115"
+  }
+]
