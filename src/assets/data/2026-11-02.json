@@ -1,0 +1,38 @@
+[
+  {
+    "title": "OpenAI 擬將數據中心重新命名為「AI 運算校園」以改善公眾觀感",
+    "summary": [
+      "數據中心在當地社區中常面臨強烈反對與不受欢迎的情況。",
+      "OpenAI 考慮透過品牌重塑策略，將數據中心改稱為「AI 運算校園」（AI compute campuses）。",
+      "此舉旨在透過改變稱呼來降低公眾對大型基礎設施建設的負面情緒與抵觸感。"
+    ],
+    "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/"
+  },
+  {
+    "title": "AI 便利科技執行長，但對其他人群的影響為何？",
+    "summary": [
+      "討論科技執行長在 AI 時代的聲明常顯得脫節或缺乏同理心。",
+      "指出 AI 技術主要簡化了高層管理者的工作流程與決策。",
+      "引發對 AI 技術對普通員工及更廣泛社會群體實際影響的反思與質疑。"
+    ],
+    "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/"
+  },
+  {
+    "title": "Ivanti 修補兩個 ICS 漏洞，CISA 警告已出現相關攻擊",
+    "summary": [
+      "Ivanti 於 10 月 29 日更新安全公告，為 SSL VPN 設備 Ivanti Connect Secure (ICS) 修補兩個新漏洞。",
+      "修補的漏洞編號為 CVE-2026-111357 與 CVE-2026-118527。",
+      "美國網路安全與基礎設施安全局 (CISA) 已將相關漏洞列入已知被利用漏洞 (KEV) 清單，並警告已出現相關攻擊活動。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180131"
+  },
+  {
+    "title": "91APP 遭駭波及臺灣無印良品，官網訂單資料恐外洩",
+    "summary": [
+      "91APP 遭駭事件調查結果顯示，可能影響範圍最多達 1,329 家品牌客戶。",
+      "臺灣無印良品 (MUJI) 證實接獲通知，其存放於 91APP 的官網購物訂單資料庫遭駭。",
+      "無印良品表示相關顧客個資可能受到影響，同時日本 MUJI App 也傳出發生不同的資安事件。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180124"
+  }
+]
