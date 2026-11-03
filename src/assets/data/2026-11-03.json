@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Google Dreambeans 進軍印度，支援 13 種語言推廣 AI 個人化故事",
+    "summary": [
+      "Google 最新 AI 實驗項目 Dreambeans 正式進入印度市場。",
+      "該服務現已支援 13 種印度語言，旨在讓大眾更容易接觸 AI 生成的個人化故事。",
+      "此舉顯示 Google 致力於透過本地化語言支援，擴大 AI 敘事工具的普及率。"
+    ],
+    "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/"
+  },
+  {
+    "title": "Apple 暗示透過第三方 AI 應用機會增加營收",
+    "summary": [
+      "Apple 在週一晚間的法說會中，暗示了透過第三方「機會」來刺激營收的方式。",
+      "市場解讀 Apple 可能正在探索與第三方 AI 應用程式合作的新商業模式。",
+      "此舉顯示 Apple 正尋求在 AI 生態系中尋找新的收入增長點。"
+    ],
+    "url": "https://techcrunch.com/2026/11/02/apple-may-try-to-increase-revenue-by-doing-something-with-third-party-ai-apps/"
+  },
+  {
+    "title": "Marvell 斥資 1,150 億美元收購 Lumentum，整合 AI 晶片與光通訊技術",
+    "summary": [
+      "Marvell 宣布以全股票交易方式收購光通訊大廠 Lumentum，交易企業價值約 1,150 億美元。",
+      "雙方將整合 AI 晶片、網路交換及光通訊技術，以強化下一代 AI 資料中心的高速互連能力。",
+      "Marvell 預估合併後可服務的市場規模將達 5,500 億美元，交易預計於 2028 年上半年完成。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180171"
+  },
+  {
+    "title": "歐洲能源巨擘 ENGIE 合作夥伴平台遭駭，部分法國客戶資料外洩",
+    "summary": [
+      "法國能源集團 ENGIE 證實其合作夥伴使用的客戶開發與行銷工具遭未經授權者入侵。",
+      "事件導致部分法國客戶資料外洩，ENGIE 已切斷攻擊者存取權限並展開調查。",
+      "目前尚未公布受影響的具體客戶人數及遭入侵的合作夥伴名稱。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180170"
+  }
+]
