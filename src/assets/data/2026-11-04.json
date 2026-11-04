@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Anthropic 開發 FlashProve 系統以驗證 AI 模型身份",
+    "summary": [
+      "Anthropic 正在開發名為 FlashProve 的新系統。",
+      "該系統旨在讓使用者能驗證 AI 回應是否確實來自其所聲稱的模型。",
+      "此舉有助於解決 AI 模型身份偽造與信任問題。"
+    ],
+    "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/"
+  },
+  {
+    "title": "資料中心因電力等待時間過長，轉用舊噴氣引擎供電",
+    "summary": [
+      "資料中心建設者面臨電網接入和新渦輪機長達數年的等待期。",
+      "為解決電力短缺，業者轉向使用效率較低且環保性較差的舊噴氣引擎。",
+      "此舉被視為一種非常規且較不環保的臨時解決方案。"
+    ],
+    "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/"
+  },
+  {
+    "title": "XCPE 殭屍網路波及臺灣近 9 萬臺 Android 設備",
+    "summary": [
+      "Google 揭露 XCPE 殭屍網路，透過設備供應商在出廠前植入惡意程式進行攻擊。",
+      "後門直接預載於 Android 設備韌體，導致設備從交付時即被控制。",
+      "此類攻擊使一般使用者難以透過更新或移除應用程式自行清除，臺灣近 9 萬臺設備受影響。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180211"
+  },
+  {
+    "title": "日本三得利集團雲端服務遭駭，逾 10 萬人個資外洩",
+    "summary": [
+      "三得利控股及三得利健康公告，其使用的外部雲端服務遭第三方未授權存取。",
+      "攻擊者下載了包含員工、合作夥伴及客戶個資的檔案，導致逾 10 萬人資料外洩。",
+      "三得利於 10 月 28 日偵測到異常活動並立即阻斷存取，目前正進行調查。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180210"
+  }
+]
