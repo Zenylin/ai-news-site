@@ -1,0 +1,38 @@
+[
+  {
+    "title": "傳 Apple 削減內部 AI 使用預算",
+    "summary": [
+      "Apple 據報正大幅削減工程團隊在 AI 方面的支出。",
+      "公司內部對於 AI 工具的預算分配正在進行調整。",
+      "此舉可能反映 Apple 對內部 AI 應用策略的重新評估。"
+    ],
+    "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/"
+  },
+  {
+    "title": "中期選舉後，數據中心爭議恐將升級",
+    "summary": [
+      "數據中心反對聲音在周二的中期選舉中跨越黨派界限。",
+      "選舉結果顯示公眾對數據中心議題的關注度上升。",
+      "未來圍繞數據中心的政策與社會衝突可能加劇。"
+    ],
+    "url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/"
+  },
+  {
+    "title": "法國銀行 Crédit Mutuel Arkéa 遭網攻，逾 1.18 億歐元被轉走",
+    "summary": [
+      "法國合作銀行集團 Crédit Mutuel Arkéa 證實於 11 月 4 日遭遇網路攻擊。",
+      "攻擊者透過外部服務商平台取得系統存取權限。",
+      "銀行帳戶遭利用向其他金融機構進行未授權轉帳，損失金額逾 1.18 億歐元。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180255"
+  },
+  {
+    "title": "法國國家血液機構冷藏設備遭網攻，3 處設施溫度控制被竄改",
+    "summary": [
+      "歐洲冷凍冷藏設備網攻事件從零售業蔓延至醫療機構。",
+      "法國國家血液機構（EFS）旗下 3 處設施的冷藏設備控制系統遭攻擊。",
+      "攻擊者竄改溫度及除霜設定，企圖將設備調高至極端溫度。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180253"
+  }
+]
