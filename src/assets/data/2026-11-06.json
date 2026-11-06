@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Airbnb 宣布將於 2027 年上半年推出 AI 旅遊代理",
+    "summary": [
+      "Airbnb 即將推出的 AI 代理旨在協助旅客規劃行程與比較選項。",
+      "該功能將涵蓋預訂管理，並在住宿期間提供持續的協助。",
+      "預計在 2027 年上半年正式上線。"
+    ],
+    "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/"
+  },
+  {
+    "title": "Meta 開放美國用戶與 Muse AI 化身進行視訊通話",
+    "summary": [
+      "Meta 的 AI 代理現在可以透過可自訂的動畫化身進行視訊通話。",
+      "此功能為即將推出的類似電子雞的可穿戴裝置做鋪墊，旨在讓 Muse 更具生命力。",
+      "目前僅限美國用戶使用。"
+    ],
+    "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/"
+  },
+  {
+    "title": "Amazon S3 Tables 支援 Hive 轉 Iceberg 託管遷移",
+    "summary": [
+      "AWS 新增功能允許將 Amazon S3 上已登錄 Glue Data Catalog 的 Parquet 格式 Hive 資料表遷移至 S3 Tables。",
+      "資料驗證、格式轉換與搬移均由服務自動處理，企業無需自建遷移管線或配置運算資源。",
+      "在大部分遷移期間，來源資料表仍可繼續使用，確保業務連續性。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180282"
+  },
+  {
+    "title": "Google 投資 170 億美元在懷俄明州興建首座資料中心",
+    "summary": [
+      "Google 宣布投資 170 億美元在美國懷俄明州建立其首座資料中心。",
+      "該中心採用 702MW 天然氣燃料電池結合碳捕捉與封存（CCS）技術，以穩定供電並降低碳排放。",
+      "Google 承諾自行負擔用電及相關基礎設施成本，避免將費用轉嫁給當地居民。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180286"
+  }
+]
