@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Crusoe 將問題重重的懷俄明州資料中心項目出售給 Google",
+    "summary": [
+      "Crusoe 將其位於懷俄明州、面臨開發挑戰的資料中心項目出售給 Google。",
+      "此交易突顯了開發大型 AI 資料中心所面臨的困難與風險。",
+      "該項目此前因技術或營運問題而陷入困境，最終由科技巨頭接手。"
+    ],
+    "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/"
+  },
+  {
+    "title": "OpenAI 據報以 1.25 兆美元估值再融資 110 億美元",
+    "summary": [
+      "OpenAI 據報導正在進行一輪額外的 110 億美元融資。",
+      "該輪融資預計在未來幾週內完成，目前尚未正式關閉。",
+      "此次融資後，OpenAI 的估值達到 1.25 兆美元。"
+    ],
+    "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+  },
+  {
+    "title": "Google Compute Engine API 支援多版本並行，既有系統無需強制升級",
+    "summary": [
+      "Google 在 Compute Engine API 中引入多版本管理機制，允許舊版 /v1 API 與新版 API 並行運作。",
+      "企業可指定使用特定 API 版本，完成內部測試後再自行安排升級時間。",
+      "此舉避免了企業因 Google 更新 API 而必須立即修改既有自動化程式的困擾。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180294"
+  },
+  {
+    "title": "憑證效期縮短，普鴻看好企業自動化管理需求浮現",
+    "summary": [
+      "隨著 TLS 憑證有效期持續縮短，企業對憑證自動化管理的需求逐漸增加。",
+      "普鴻資訊推出憑證生命週期管理產品 ProCLM，並結合自研 PQC6000 後量子密碼學硬體卡。",
+      "該公司透過強化金鑰保護能力與自動化功能，與其他市場解決方案形成差異化競爭。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180293"
+  }
+]
