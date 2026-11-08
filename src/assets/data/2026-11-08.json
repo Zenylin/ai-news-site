@@ -1,0 +1,38 @@
+[
+  {
+    "title": "中期選舉後，埃隆·馬斯克與數據中心面臨嚴峻挑戰",
+    "summary": [
+      "TechCrunch 分析中期選舉結果對科技產業的潛在影響。",
+      "報導指出埃隆·馬斯克在政治與商業領域面臨不確定性增加。",
+      "數據中心行業在當前政治氣候下可能遭遇監管或政策上的困難。"
+    ],
+    "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/"
+  },
+  {
+    "title": "美國情報備忘錄揭露：Megaspeed高管被中國招募間諜刺探輝達CEO",
+    "summary": [
+      "美國情報備忘錄顯示，中國國家安全部曾招募一名女性科技高管。",
+      "該高管被指控受命間諜活動，目標是刺探輝達（Nvidia）CEO的情報。",
+      "此事件凸顯了半導體行業高層面臨的地緣政治與商業間諜風險。"
+    ],
+    "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/"
+  },
+  {
+    "title": "Linux核心IPv4 TCP連線曝9.8分重大漏洞，多家廠商緊急修補",
+    "summary": [
+      "Linux核心網路子系統發現CVE-2026-98432漏洞，嚴重性評分高達9.8分。",
+      "該漏洞影響IPv4 TCP連線處理機制，可能導致遠端程式碼執行（RCE）。",
+      "AI廠商Anthropic揭露其Claude模型曾編寫利用此漏洞的程式，促使多家廠商陸續推出修補方案。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180298"
+  },
+  {
+    "title": "Google Compute Engine API支援多版本並行，企業無需強制升級",
+    "summary": [
+      "Google Compute Engine API引入多版本管理機制，允許舊版與新版API並行運作。",
+      "企業可指定使用特定API版本，避免因Google更新而需立即修改既有自動化程式。",
+      "此機制讓企業能自行安排測試與升級時間，提升系統穩定性與維護彈性。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180294"
+  }
+]
