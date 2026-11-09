@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nvidia 調查執行長黃仁勳與疑似中國間諜的私人關係",
+    "summary": [
+      "Nvidia 宣布將針對執行長黃仁勳與一名疑似中國間諜的個人關係進行內部調查。",
+      "黃仁勳在致公司備忘錄中承認與該人士存在婚外情關係。",
+      "此事件引發外界對科技巨頭高層安全與道德風紀的關注。"
+    ],
+    "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/"
+  },
+  {
+    "title": "中期選舉後，馬斯克與資料中心產業面臨嚴峻挑戰",
+    "summary": [
+      "美國中期選舉結果對科技產業產生顯著影響，特別是對伊隆·馬斯克相關業務。",
+      "資料中心建設與運營在當前政治與經濟環境下面臨不確定性增加。",
+      "分析指出，政策變動可能導致科技巨頭在基礎設施投資上遭遇阻力。"
+    ],
+    "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/"
+  },
+  {
+    "title": "Perplexity 推出 Teammates，支援多個常駐 AI 代理人分工協作",
+    "summary": [
+      "Perplexity 於 11 月 4 日發布新功能 Teammates，允許使用者建立多個常駐 AI 代理人。",
+      "這些代理人可負責長期專案，具備主動追蹤進度、執行任務及互相交辦工作的能力。",
+      "此舉標誌著科技業者在主動型 AI 代理人市場競爭加劇，強調多智能體協作效率。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180320"
+  },
+  {
+    "title": "半導體封測廠精材遭駭，客戶與員工聯絡資訊外洩",
+    "summary": [
+      "半導體封測廠精材（3374）於 11 月 6 日揭露內部資訊系統遭不明 IP 異常入侵。",
+      "資安事件導致某客戶、部分供應商及少數員工的名稱與商務郵件聯絡資訊外洩。",
+      "公司已發布重大訊息，並啟動相關資安應變程序以評估影響範圍。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180318"
+  }
+]
