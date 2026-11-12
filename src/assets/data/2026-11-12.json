@@ -1,0 +1,38 @@
+[
+  {
+    "title": "黃仁勳誰能接班？TechCrunch 列出非科學的潛在繼任者名單",
+    "summary": [
+      "Nvidia 目前缺乏明確的CEO繼任計畫，且現任CEO黃仁勳正處於風暴中心。",
+      "TechCrunch 針對此情況起草了一份潛在繼任者的短名單。",
+      "該名單被描述為「高度非科學」，僅供參考與討論。"
+    ],
+    "url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/"
+  },
+  {
+    "title": "黃仁勳醜聞時間線：美中AI基礎設施競賽下的國家安全隱憂",
+    "summary": [
+      "文章整理了Nvidia CEO黃仁勳涉及與疑似中國間諜關係醜聞的時間線。",
+      "此事件可能對國家安全產生深遠影響。",
+      "背景為美國與中國正在競逐開發最先進的AI基礎設施。"
+    ],
+    "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
+  },
+  {
+    "title": "netiCRM 資安事件釐清：內部管理主機遭駭，暫未發現捐款人資料外洩",
+    "summary": [
+      "網絡行動科技指出遭入侵的是內部管理主機，而非客戶使用的 netiCRM 系統主機。",
+      "公司自身持有的客戶聯絡人、帳務及客服紀錄遭竊，但未發現非營利組織網站的捐款人資料外洩跡象。",
+      "已將 500 家客戶主機納入檢查及重建範圍以應對此次資安事件。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180438"
+  },
+  {
+    "title": "Google 同步更新 Chrome 157 穩定版與 ChromeOS，修補 83 個漏洞",
+    "summary": [
+      "Google 於 11 月 11 日發布 Chrome 瀏覽器及 ChromeOS 作業系統的安全更新。",
+      "Chrome 157 桌面穩定版共修補 83 個漏洞，包含 5 個重大漏洞與 78 個高風險漏洞。",
+      "漏洞涉及元件以 Skia 與 V8 最多，各佔 17 個。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180443"
+  }
+]
