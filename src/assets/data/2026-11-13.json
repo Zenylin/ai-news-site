@@ -1,0 +1,38 @@
+[
+  {
+    "title": "民主黨議員啟動對 Nvidia 調查，嚴厲指控黃仁勳與川普的「陰謀」",
+    "summary": [
+      "美國國會民主黨議員針對 Nvidia 的中國銷售業務及其與川普政府的往來啟動第二波調查。",
+      "調查起因於此前曝光的疑似間諜事件，議員們對黃仁勳與川普之間的關係提出強烈批評。",
+      "相關信件內容嚴厲，指控雙方存在不當的「陰謀」行為，引發科技與政治界的關注。"
+    ],
+    "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+  },
+  {
+    "title": "Muse AI 推出付費外呼功能，可撥打美國企業電話",
+    "summary": [
+      "AI 服務 Muse 新增外呼功能，允許使用者向美國企業撥打電話。",
+      "該功能並非免費提供，使用者需支付額外費用才能使用。",
+      "此舉標誌著 AI 助理在商業溝通領域的進一步擴展，但採用了付費牆策略。"
+    ],
+    "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/"
+  },
+  {
+    "title": "Rust 1.100 發布：新增套件冷卻期機制，Never Type 正式穩定",
+    "summary": [
+      "Rust 開發團隊發布 1.100.0 版本，Cargo 工具新增依賴套件發布冷卻期，讓開發者可延後採用新上架版本以降低供應鏈攻擊風險。",
+      "歷經十年及五次嘗試，Never Type 終於在該版本中正式進入穩定階段。",
+      "新版同時開放了自訂記憶體配置器的核心介面，進一步增強了語言的靈活性。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180489"
+  },
+  {
+    "title": "Apache 修補 HTTP/2 模組重大漏洞，64% 雲端環境恐受影響",
+    "summary": [
+      "Apache 軟體基金會發布 HTTP Server 2.4.71 版本，修補了三個資安漏洞。",
+      "其中最受關注的是 HTTP/2 模組 mod_http2 中的重大漏洞 CVE-2026-119618。",
+      "該漏洞源於多執行緒處理請求時的競爭條件，估計有 64% 的雲端環境可能面臨曝險風險。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180490"
+  }
+]
