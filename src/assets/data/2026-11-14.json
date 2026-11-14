@@ -1,0 +1,38 @@
+[
+  {
+    "title": "黃仁勳離任恐衝擊AI新創融資，創投與創辦人憂心資金縮水",
+    "summary": [
+      "Nvidia在黃仁勳領導下曾向AI新創投入數百億美元資金。",
+      "創投與創辦人預期黃仁勳離任後，投資金額將減少且估值降低。",
+      "市場擔憂缺乏Nvidia的強力支持，AI新創融資環境將變得更為嚴峻。"
+    ],
+    "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/"
+  },
+  {
+    "title": "AI代理新創LangChain估值達30億美元",
+    "summary": [
+      "AI代理新創公司LangChain的最新估值達到30億美元。",
+      "其模型與平台無關的代理管理工具LangSmith已擁有7,000名客戶。",
+      "LangChain透過提供靈活的代理管理解決方案，在市場中迅速擴展業務。"
+    ],
+    "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/"
+  },
+  {
+    "title": "AWS擴充AgentCore執行環境，支援大型程式編譯與本地模型載入",
+    "summary": [
+      "AWS推出Amazon Bedrock AgentCore Runtime V2，單一工作階段資源提升至8個虛擬CPU及32 GB記憶體。",
+      "容器映像檔容量上限提高至10 GB，允許AI代理在環境內編譯大型專案、操作瀏覽器及載入本地模型。",
+      "新版Runtime已成為19個AWS區域新建執行環境的預設版本。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180503"
+  },
+  {
+    "title": "Visual Studio C++動態除錯正式推出，可逐行檢查最佳化程式",
+    "summary": [
+      "微軟在Visual Studio 2026及MSVC Build Tools 14.52中正式推出C++動態除錯功能。",
+      "開發者現在可以在經過最佳化的C++程式中查看區域變數並逐行檢查程式碼。",
+      "該功能允許開發者進入原本被編譯器內嵌的函式，提升除錯效率與深度。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180497"
+  }
+]
