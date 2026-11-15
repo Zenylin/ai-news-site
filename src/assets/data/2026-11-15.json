@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nvidia 資安主管離職與 CEO 黃仁勳下台引發內部洩密疑慮",
+    "summary": [
+      "Nvidia 資安主管於八月悄然離職，隨後 CEO 黃仁勳因與涉嫌向中國輸送晶片公司的高管有往來而宣布下台。",
+      "前情報人員指出，此類涉及日常對話的洩密行為，是大多數企業資安團隊難以有效偵測的盲點。",
+      "事件凸顯了 Nvidia 在內部資安監控與高層關係管理上的潛在風險。"
+    ],
+    "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/"
+  },
+  {
+    "title": "馬斯克等科技高管聯署請願要求 Nvidia 復職黃仁勳",
+    "summary": [
+      "伊隆·馬斯克（Elon Musk）與其他多位科技業高管簽署請願書，呼籲 Nvidia 恢復黃仁勳的 CEO 職位。",
+      "截至週六下午，該請願書已獲得超過 115,000 個簽名。",
+      "此舉顯示科技業內對黃仁勳領導地位的強烈支持，以及對 Nvidia 管理層變動的不安。"
+    ],
+    "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/"
+  },
+  {
+    "title": "AI 趨勢周報：Google 推出新基準測試，強調 AI Agent 專業工作實戰能力",
+    "summary": [
+      "Google 發布新的 AI Agent 基準測試（Benchmark），不再僅限於圖像識別，而是直接考核專業工作的實戰表現。",
+      "本期周報涵蓋 11 月 6 日至 12 日的重點 AI 新聞與趨勢。",
+      "新測試標準反映了業界對 AI 代理在複雜專業場景中實際應用能力的重視。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180507"
+  },
+  {
+    "title": "AWS 擴充 AgentCore 執行環境，支援大型程式編譯與本地模型載入",
+    "summary": [
+      "AWS 推出 Amazon Bedrock AgentCore Runtime V2，單一工作階段資源上限提升至 8 個虛擬 CPU 及 32 GB 記憶體。",
+      "容器映像檔容量上限提高至 10 GB，使 AI 代理能在執行環境內編譯大型程式專案、操作瀏覽器及載入本地模型。",
+      "新版 Runtime 已成為 19 個 AWS 區域新建執行環境的預設版本。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180503"
+  }
+]
