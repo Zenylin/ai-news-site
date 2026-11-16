@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Apple 推出新 App 研究人們如何使用 AI 進行健康管理",
+    "summary": [
+      "Apple 發布一款專為研究設計的新應用程式，旨在觀察用戶如何利用 AI 技術處理日常醫療問題。",
+      "該 App 將協助回答常見的醫療諮詢，並收集數據以分析 AI 在健康領域的實際應用模式。"
+    ],
+    "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/"
+  },
+  {
+    "title": "印度晶片新創 Bharat Semi 完成 2400 萬美元種子輪融資，瞄準全球 AI 感測器市場",
+    "summary": [
+      "印度晶片新創公司 Bharat Semi 宣布完成 2400 萬美元的種子輪融資，資金將用於擴展其 AI 感測器技術。",
+      "該公司已獲得 General Atomics 等企業的設計採用，顯示其 AI 感測器技術已獲得市場認可。",
+      "Bharat Semi 計劃利用此次融資進一步拓展全球市場，強化其在 AI 硬體領域的競爭力。"
+    ],
+    "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/"
+  },
+  {
+    "title": "微軟 Windows 本機 AI 模型將改用 Aion Instruct，輸入上下文上限擴大逾 9 倍",
+    "summary": [
+      "微軟宣布將以 Aion Instruct 取代 Phi Silica 作為 Windows 裝置端語言模型，預計 11 月 20 日起向 Windows Insider 計畫的 Copilot+ PC 分階段推送。",
+      "新模型雖然參數量減少，但能處理更長的輸入內容，上下文上限擴大超過 9 倍，並擴大支援 Nvidia RTX 及 AMD RDNA 4 系列 GPU。",
+      "2027 年 1 月下旬，該更新將擴大至符合硬體條件的正式版 Windows 裝置。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180525"
+  },
+  {
+    "title": "韓國企業協作平臺 DaouOffice 傳遭零時差漏洞攻擊，至少 3 家金融業者受駭",
+    "summary": [
+      "韓國企業協作平臺 DaouOffice 近期接連發生資安事件，包括存取控制漏洞遭利用及企業共用帳號遭暴力破解。",
+      "事件影響已波及韓國加密貨幣交易所 Bithumb、Flybit 及漢陽證券，傳出客戶或員工個資外洩。",
+      "服務供應商 Daou Technology 強調兩起事故原因不同，並指出相關資安事故是先由受影響企業公布，供應商隨後才發布公開說明。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180522"
+  }
+]
