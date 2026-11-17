@@ -1,0 +1,38 @@
+[
+  {
+    "title": "AI資安新創Corma三個月內估值達10億美元",
+    "summary": [
+      "AI資安新創公司Corma在產品推出僅三個月後，完成1.25億美元A輪融資。",
+      "該輪融資由NEA領投，使公司估值達到10億美元。",
+      "此舉顯示市場對AI驅動資安解決方案的高度關注與投資熱度。"
+    ],
+    "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/"
+  },
+  {
+    "title": "Nvidia財報前夕：市場關注的關鍵問題與潛在隱憂",
+    "summary": [
+      "Nvidia代理CEO兼長期CFO Colette Kress即將於週二公布第三季度財報。",
+      "面對公司目前的動盪局面，市場期待管理層能回答多項關鍵問題。",
+      "分析指出，儘管問題重要，但Nvidia在財報會議中可能不會直接回應這些敏感議題。"
+    ],
+    "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/"
+  },
+  {
+    "title": "OpenAI啟動嵌入式評估，邀4家外部機構深入檢驗AI安全性",
+    "summary": [
+      "OpenAI宣布啟動第一階段「嵌入式評估」計畫，與4家獨立機構合作。",
+      "外部專家將進入OpenAI內部，存取未發布模型、原始碼及訓練資料以進行深度檢驗。",
+      "此舉旨在發現傳統API測試可能遺漏的安全漏洞，強化AI模型的防護機制。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180565"
+  },
+  {
+    "title": "日本無印良品109萬筆信用卡資料恐遭未授權存取",
+    "summary": [
+      "日本無印良品揭露系統遭未授權存取，涉及最多2,726萬筆會員資料。",
+      "其中約109萬筆信用卡資料存在風險，完整卡號未遮罩且未加密。",
+      "官方承認資料逾期未刪除，增加了資料外洩的潛在危害。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180562"
+  }
+]
