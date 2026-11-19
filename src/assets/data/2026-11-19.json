@@ -1,0 +1,38 @@
+[
+  {
+    "title": "微軟執行長 Nadella 解釋為何要求 6 萬名員工自願離職",
+    "summary": [
+      "微軟執行長 Satya Nadella 說明在 10 月向 6 萬名員工提供買斷方案，鼓勵其自願離職而非進行大規模裁員。",
+      "此舉背後的主要原因是人工智慧（AI）的發展，但並非傳統意義上的技術替代。",
+      "Nadella 強調這是為了適應 AI 時代的組織結構調整，而非單純削減人力成本。"
+    ],
+    "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/"
+  },
+  {
+    "title": "Nadella 指出關鍵基礎設施存在「無法修補」風險，AI 帶來資安雙面效應",
+    "summary": [
+      "微軟執行長 Satya Nadella 指出許多關鍵基礎設施存在「無法修補」（unpatchable）的安全隱患。",
+      "他淡化了近期 Outlook 服務中斷事件的影響，但強調 AI 技術同時帶來了機會與新挑戰。",
+      "在 AI 網路攻擊恐懼升溫的背景下，Nadella 呼籲關注連接世界的資安問題。"
+    ],
+    "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/"
+  },
+  {
+    "title": "Nginx 緊急修補 10 個漏洞，其中 5 個恐遭遠端執行程式碼",
+    "summary": [
+      "開源網頁伺服器 Nginx 發布 1.30.7 穩定版及 1.31.9 主線版，緊急修補 10 個安全漏洞。",
+      "其中 5 個漏洞屬於遠端程式攻擊漏洞，資安業者 Xint 獨立發現並命名為「nginx2root」。",
+      "此次更新旨在解決可能導致遠端執行程式碼的高風險安全問題。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180651"
+  },
+  {
+    "title": "OpenAI 測試讓自主代理人 Dots 擁有專屬電子郵件位址",
+    "summary": [
+      "OpenAI 透露正在測試讓常駐自主代理人 Dots 擁有自己的電子郵件位址。",
+      "此功能旨在協助使用者更有效率地執行商務作業與溝通。",
+      "Dots 於今年 9 月推出，可連接外部應用程式並主動處理待辦事項。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180650"
+  }
+]
