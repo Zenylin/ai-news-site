@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Apple 據傳正開發專屬 AI 代理，將直接運行於 Mac 系統",
+    "summary": [
+      "Apple 被發現正在開發自家的 AI 代理技術，旨在與 Meta Muse、Claude 及 OpenAI Dots 等競爭對手抗衡。",
+      "該技術預計將整合至 Mac 系統中，讓 AI 代理能夠直接操作和管理用戶的電腦環境。",
+      "此舉顯示 Apple 正加速佈局端側 AI 生態系，以強化其硬體與軟體的整合優勢。"
+    ],
+    "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/"
+  },
+  {
+    "title": "Anthropic 創紀錄 IPO：七位創辦人套現近 20 億美元，公司募資達 1,050 億",
+    "summary": [
+      "Anthropic 完成創紀錄的 IPO，最終發行價上調至每股 83 美元。",
+      "公司七位創辦人每人套現約 2.8 億美元，總計近 20 億美元。",
+      "此次 IPO 為 Anthropic 募得近 1,050 億美元資金，創下科技業新紀錄。"
+    ],
+    "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/"
+  },
+  {
+    "title": "微軟 Ignite 大會：Office in Copilot 全面部署，Autopilot 開放搶先體驗",
+    "summary": [
+      "微軟宣布將 Office in Copilot 正式全面部署給所有用戶，提升辦公自動化能力。",
+      "推出自主代理人 Autopilot 的搶先體驗版本，讓早鳥用戶可測試自主執行任務的功能。",
+      "同時發布針對商務用戶的 Workspaces 及 Dynamics 365 in Copilot 等多項 AI 服務。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180679"
+  },
+  {
+    "title": "PHP 發布安全更新，修補 18 個漏洞其中 7 個為重大等級",
+    "summary": [
+      "PHP 基金會於 11 月 19 日發布最新安全更新，涵蓋 8.6.0、8.5.13 及 8.4.28 等版本。",
+      "此次更新共修補 18 個安全漏洞，其中 7 個被評定為重大等級。",
+      "建議開發者盡快更新 PHP 版本，以確保應用程式的安全性與穩定性。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180678"
+  }
+]
