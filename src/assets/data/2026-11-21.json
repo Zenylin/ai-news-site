@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Spotify 創辦人 Daniel Ek 投資 AI 研究者創辦的核融合能源新創",
+    "summary": [
+      "Spotify 創辦人 Daniel Ek 支持由 AI 研究者創辦的核融合能源新創公司 Europa Fusion。",
+      "該公司致力於開發核融合技術，旨在提供清潔且可持續的能源解決方案。",
+      "此投資顯示科技界對核融合商業化前景的關注與信心。"
+    ],
+    "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/"
+  },
+  {
+    "title": "AI 宣稱解決 167 年歷史的黎曼猜想，人類學者亦提出競爭性解法",
+    "summary": [
+      "最新 AI 驅動的研究成果宣稱解決了數學界懸置 167 年的黎曼猜想，引發數學界震驚。",
+      "同時，人類數學家也提出了針對該猜想的競爭性解決方案。",
+      "此事件凸顯了 AI 在複雜數學問題解決能力上的突破，以及人機競爭的新態勢。"
+    ],
+    "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/"
+  },
+  {
+    "title": "尼泊爾 19 家公立醫院導入開源電子病歷，採用中央統一開發模式",
+    "summary": [
+      "尼泊爾已有 19 家公立醫院導入基於 OpenMRS 的開源電子病歷系統，覆蓋全國 7 省中的 6 省。",
+      "系統採用 6 階段導入流程，並由中央統一負責開發與更新，確保標準一致性。",
+      "導入後醫護人員可跨科部查閱完整就醫紀錄，醫院亦能透過電子報表掌握營運狀況。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180691"
+  },
+  {
+    "title": "刑事局揭露詐團新手法：Android 手機變詐騙中繼站，泡芙箱藏 SIM 卡",
+    "summary": [
+      "境外詐騙集團利用在臺架設設備，將詐騙電話轉接為國內門號撥出，以規避國際電話警示機制。",
+      "警方查獲詐團利用一般 Android 手機搭配智能撥號 APP 及藍牙設備，實現境外遠端撥打詐騙電話。",
+      "今年 1 至 9 月已查獲 38 處轉接據點、111 臺 DMT 設備及 48 名嫌犯，並揭露透過物流包裹運送人頭 SIM 卡的新手法。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180687"
+  }
+]
