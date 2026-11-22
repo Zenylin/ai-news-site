@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Signal 限制手機截圖功能，以應對 AI 監控帶來的生存威脅",
+    "summary": [
+      "Signal 在 Android 和 iOS 應用程式中限制了用戶的截圖功能。",
+      "此舉旨在對抗由 AI 驅動的大規模監控所帶來的「生存威脅」。",
+      "該措施反映了隱私保護工具在面對先進監控技術時的防禦策略調整。"
+    ],
+    "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/"
+  },
+  {
+    "title": "Nvidia 的兩面性：財報表現與高層對黃仁勳回歸的呼籲",
+    "summary": [
+      "Nvidia 最新的財報報告呈現出一種特定的財務與業務圖景。",
+      "與此同時，多位科技界高管公開呼籲執行長黃仁勳（Jensen Huang）回歸。",
+      "這兩種截然不同的訊號揭示了公司內部或市場對其領導層與未來方向的複雜看法。"
+    ],
+    "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/"
+  },
+  {
+    "title": "網擎策略投資微智安聯，攜手擴大資安產品布局並拓展海外市場",
+    "summary": [
+      "網擎資訊（Openfind）宣布策略投資新創公司微智安聯（Shield eXtreme）。",
+      "雙方將結合網擎在郵件安全領域的優勢與微智安聯的技術，擴大產品線並開拓海外市場。",
+      "網擎同時揭露了其在日本與奈及利亞市場的經營現況，並強調運用 AI 強化技術研發。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180692"
+  },
+  {
+    "title": "尼泊爾 19 家公立醫院導入開源電子病歷，採用中央統一開發與更新模式",
+    "summary": [
+      "尼泊爾已有 19 家公立醫院導入基於 OpenMRS 的開源電子病歷（EMR）系統，覆蓋全國 7 個省中的 6 個。",
+      "該系統採用 6 階段導入流程，並由中央統一負責開發與更新，以確保標準化與安全性。",
+      "導入後，醫護人員可跨科部查閱病人紀錄，醫院亦能透過電子報表掌握日常營運狀況。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180691"
+  }
+]
