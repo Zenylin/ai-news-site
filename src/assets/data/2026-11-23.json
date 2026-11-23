@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Notable Capital、GIC 與 Baillie Gifford 在 Anthropic IPO 前重注的原因",
+    "summary": [
+      "三家主要投資機構分享了在 Anthropic 上市前投入數十億美元的決策依據。",
+      "這些投資者闡述了對 Anthropic 技術潛力與市場前景的堅定信心。",
+      "文章探討了機構投資者評估高成長 AI 公司時的關鍵考量因素。"
+    ],
+    "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/"
+  },
+  {
+    "title": "OpenAI 首席科學家談如何限制 AI 發展速度",
+    "summary": [
+      "OpenAI 首席科學家提出建立 AI 發展「速度限制」的概念。",
+      "專家指出，要有效限制發展速度，首要任務是達成對「速度」衡量標準的共識。",
+      "此觀點旨在探討如何在推動 AI 進步的同時，確保發展過程可控且安全。"
+    ],
+    "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/"
+  },
+  {
+    "title": "GKE 支援 Dataplane V2 原地遷移，企業無須另建叢集",
+    "summary": [
+      "Google Cloud 在 GKE 推出網路資料平面 Dataplane V2 原地遷移預覽功能。",
+      "符合條件的 VPC 原生叢集可直接從 V1 轉換至 V2，無需建立新叢集或搬遷工作負載。",
+      "遷移過程涉及節點重建與 Pod 重新排程，企業需評估對服務可能造成的影響。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180713"
+  },
+  {
+    "title": "荷蘭測試 6 款 AI 眼鏡揭安全漏洞，建議消費者暫勿購買",
+    "summary": [
+      "荷蘭個人資料保護局發布報告，指出受測 AI 眼鏡存在隱私、資安及人身安全风险。",
+      "發現的漏洞包括設備可能被陌生人接管、未經同意錄影，以及在緊急情況下提供錯誤資訊。",
+      "基於上述風險，官方建議消費者暫時不要購買這些 AI 攝影眼鏡產品。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180714"
+  }
+]
