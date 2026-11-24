@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Anthropic 推出 Claude Ship，讓 AI 代理自動審查、修復並核准程式碼變更",
+    "summary": [
+      "Anthropic 發布新開發工具 Claude Ship，旨在解決 AI 生成程式碼堆積造成的瓶頸。",
+      "該工具允許 AI 代理處理常規的程式碼審查與核准流程。",
+      "此舉有助於自動化開發流程中的重複性任務，提升開發效率。"
+    ],
+    "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+  },
+  {
+    "title": "Supertake 募資 2000 萬美元，利用 AI 代理將市場預測轉化為股票組合",
+    "summary": [
+      "新創公司 Supertake 完成 2000 萬美元融資。",
+      "該平台允許用戶透過 AI 代理將市場預測直接轉換為股票投資組合。",
+      "用戶無需自行挑選個股，即可根據對市場的判斷進行投資。"
+    ],
+    "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/"
+  },
+  {
+    "title": "CISA 警告醫療影像軟體與 N-able 郵件防護平台漏洞遭積極利用",
+    "summary": [
+      "美國 CISA 將 CVE-2026-133968 與 CVE-2026-134624 兩個漏洞加入已知遭利用漏洞名單（KEV）。",
+      "受影響系統包括開放原始碼醫療影像 AI 軟體 MONAI Label 及 N-able Mail Assure 郵件防護系統。",
+      "聯邦機構被要求在 11 月 26 日前完成相關漏洞的修補工作。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180757"
+  },
+  {
+    "title": "韓國電力公社兩套系統遭入侵，約 152 萬人個資外洩含銀行與信用卡資訊",
+    "summary": [
+      "韓國電力公社（KEPCO）揭露旗下兩套資訊系統遭受駭客入侵。",
+      "外洩資料涵蓋約 152 萬名用戶、企業代表及員工的身分與聯絡資訊。",
+      "敏感資料包括銀行帳號、信用卡卡號及電費帳單資訊，涉及金融安全風險。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180753"
+  }
+]
