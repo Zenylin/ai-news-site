@@ -1,0 +1,34 @@
+[
+  {
+    "title": "標普考慮因治理與關鍵人物風險降級 Nvidia 信用評級",
+    "summary": [
+      "信用評級機構標普（S&P）正考慮將 Nvidia 的信用評級降至 AA-，即第四高評級。",
+      "此次潛在降級主要源於公司治理問題及對關鍵人物（key man）的依賴風險。"
+    ],
+    "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
+  },
+  {
+    "title": "OpenAI 合併 Chat 與 Work 功能，重度使用者可能更快觸及使用上限",
+    "summary": [
+      "OpenAI 宣布將合併 ChatGPT 的 Chat 與 Work 體驗，並引入單一使用量計量標準。",
+      "由於採用統一計量方式，重度使用者可能會比之前更早達到使用限制。"
+    ],
+    "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/"
+  },
+  {
+    "title": "FBI 全國犯罪資訊中心資料庫遭駭，疑似發生資安事故",
+    "summary": [
+      "美國聯邦調查局（FBI）維護的全國犯罪資訊中心（NCIC）資料庫遭駭客存取。",
+      "可能有為數不詳的刑案或罪犯資訊外流，FBI 已著手調查此事件。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180822"
+  },
+  {
+    "title": "1Password 員工 GitHub 帳號遭入侵，原始碼被竊並植入惡意程式",
+    "summary": [
+      "駭客透過入侵 1Password 員工的 GitHub 帳號取得公司原始碼，並在後端服務植入惡意程式碼。",
+      "攻擊導致部分客戶的帳號管理資料及非機密資訊被下載，但儲存客戶密碼的儲存庫（vault）及金鑰未受影響。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180820"
+  }
+]
