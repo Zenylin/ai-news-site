@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nvidia 暫停向東南亞出口晶片，以配合美國防範晶片流入中國",
+    "summary": [
+      "Nvidia 通知製造夥伴暫停向馬來西亞、新加坡、泰國及印尼出貨伺服器。",
+      "此舉旨在配合美國政府加強監管，防止人工智慧晶片透過東南亞轉口至中國。",
+      "該措施反映了美國在人工智慧晶片出口管制方面的最新動態。"
+    ],
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/"
+  },
+  {
+    "title": "《GTA VI》成功上市，證明人工智慧時代中人類創作的效率並非唯一價值",
+    "summary": [
+      "《GTA VI》在 Anthropic 上市同日成為史上最成功的娛樂產品發布之一。",
+      "這款耗時費力、由人類精心打造的遊戲，挑戰了當前追求極致效率的 AI 敘事。",
+      "文章指出，在人工智慧快速發展的背景下，人類手工藝與深度創作的價值依然顯著。"
+    ],
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/"
+  },
+  {
+    "title": "美國懷俄明州鈾礦場因資安事件暫停運作，母公司申請停牌評估",
+    "summary": [
+      "澳洲礦業公司 Peninsula Energy 旗下位於美國懷俄明州的 Lance 鈾計畫發生資安事件。",
+      "子公司 Strata Energy 於 11 月 20 日發現異常後，立即暫停運作並隔離受影響系統。",
+      "母公司 Peninsula Energy 已申請在澳洲證交所暫停交易，以評估事件影響。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180852"
+  },
+  {
+    "title": "美 CIA 等情報機構傳遭駭，外洩非機密資料",
+    "summary": [
+      "據紐約時報與 CNN 報導，美國中央情報局（CIA）及國家情報總監辦公室（ODNI）疑似遭受駭客攻擊。",
+      "消息人士指出，此次事件導致部分非機密資料外洩。",
+      "此事件凸顯了美國情報機構在資安防護方面面臨的挑戰。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180850"
+  }
+]
