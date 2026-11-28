@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nvidia 暫停向東南亞四國出貨伺服器晶片",
+    "summary": [
+      "Nvidia 通知製造夥伴暫停向馬來西亞、新加坡、泰國及印尼出貨伺服器。",
+      "此舉旨在配合美國政府加強管控，防止 AI 晶片流入中國。",
+      "該措施反映了美國在 AI 晶片出口管制方面的最新動向。"
+    ],
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/"
+  },
+  {
+    "title": "GTA VI 大熱銷證明人工效率並非唯一美德",
+    "summary": [
+      "《俠盜獵車手 VI》成為史上最成功的娛樂產品發布之一。",
+      "該遊戲以高度人工化的製作過程，與同日上市的 Anthropic 形成對比。",
+      "文章指出，在 AI 時代，人工精心製作的內容仍具有不可替代的價值。"
+    ],
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/"
+  },
+  {
+    "title": "日本摩斯漢堡一個月內揭露 5 起第三方資安事件",
+    "summary": [
+      "日本摩斯食品服務公司在 10 月 23 日至 11 月 20 日期間，接連發布 5 起資安事件公告。",
+      "所有事件均涉及第三方服務商或委外維運系統遭駭。",
+      "此案例凸顯了企業在短時間內可能因不同第三方供應商問題而面臨多重資安風險。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180862"
+  },
+  {
+    "title": "BSI 解析 AI 治理新標準，強調跨部門風險管理",
+    "summary": [
+      "BSI 在 2026 國際標準管理年會中強調，AI 治理需由跨部門共同負責。",
+      "會議重點介紹了 ISO/IEC 27090 及 ISO/IEC 42119 系列 AI 測試標準的最新進展。",
+      "BSI 推出 AI 可信賴治理框架（AIFF）與 AI 信賴標誌（AI MoT），並分享 AI 代理團隊的管理經驗。"
+    ],
+    "url": "https://www.ithome.com.tw/news/180834"
+  }
+]
